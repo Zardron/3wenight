@@ -1,0 +1,50 @@
+.thumbs-wrapper {
+    display: none;
+}
+
+.slider-wrapper {
+    left: 0px;
+    top: 0px;
+    height: auto;
+    filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.56));
+}
+
+.carousel.carousel-slider {
+    position: relative;
+    margin: unset;
+    overflow: unset;
+    margin-left: unset !important;
+    margin-right: unset !important;
+}
+
+.carousel .slide {
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.carousel .slide .legend {
+    position: absolute;
+    height: 73px;
+    right: 170px;
+    top: 226px; 
+}
+
+.bg-size {
+    height: 400px;
+    width: 102%;
+    padding-right: 0px;
+    position: absolute;
+    left: 0px;
+    filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.56));
+    top: 0px;
+}
+
+.height {
+    height: 400px;
+    padding-left: unset !important;
+}
+
+.carousel{
+    background-color: black;
+}
