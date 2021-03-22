@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import '../../src/assets/css/Navbar.css'
+import DeCarousel from '../../src/scenes/components/Carousel'
 
 export default class Navbar extends Component {
 
@@ -49,6 +50,7 @@ export default class Navbar extends Component {
                 <Link to='/vietnam'><img src="4.png" className="flag4"  alt="vt"></img></Link>
                 <Link to='/thailand'><img src="5.png" className="flag5"  alt="th"></img></Link>
             </nav>
+            {/* <DeCarousel /> */}
             </>
         )
     }

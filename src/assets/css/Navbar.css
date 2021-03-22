@@ -6,7 +6,7 @@
     position: sticky;
     top: 0;
     z-index: 999;
-    width: 99.8%;
+    width: 99.9%;
     position: absolute;
     height: 80px;
     left: 0px;
@@ -185,7 +185,7 @@
     display: none;
   }
   
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1765px) {
     .NavbarItems {
       position: relative;
     }

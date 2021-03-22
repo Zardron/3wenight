@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
 import '../assets/components/Home.css'
-import DeCarousel from '../../src/scenes/components/Carousel'
+import Carousel from '../../src/scenes/components/Carousel'
+import MusicPlayer from './MusicPlayer';
 
 
 class Home extends Component {
@@ -9,14 +10,21 @@ class Home extends Component {
     render() { 
         return (  
             <>
-            <div className="bg-color">
             <Navbar />
-            <img src="3wenight_bg.png" className="bg-sizes"></img>
-            {/* <p className="welcome"><span className="text">WELCOME TO 3WE NIGHT</span></p>
-            <p className="welcome2"><span className="text2">We try to provide best entertainment leisure for everyone and introducing the best night life activities for public in those related countries</span></p>
-            <p className="welcome3"><span className="text2">Browse through some of the best nightlife activities on our website and find your dream clubbing places</span></p> */}
-            <DeCarousel />
+            <Carousel />
+
+            <div className="content">
+
+                <marquee className="marquee-details"><br></br>Join us on our afterdark/nightlife telegram group for singapore <span className="marquee-color">(t.me/sgafterdark)</span>, china/hk <span className="marquee-color">(t.me/cnhkafterdark)</span>, thailand <span className="marquee-color">(t.me/thaiafterdark)</span>, malaysia <span className="marquee-color">(t.me/myafterdark)</span>, vietnam <span className="marquee-color">(t.me/vietafterdark)</span></marquee>
+
+                <div className="grid-container">
+                    
+                    <div class="grid-item">
+                        <MusicPlayer />
+                    </div>
+                </div>
             </div>
+            
             </>
         );
     }
