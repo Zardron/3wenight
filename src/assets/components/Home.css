@@ -1,0 +1,98 @@
+.bg-size {
+    position: absolute;
+    width: 100%;
+    height: 820px;
+    left: 0px;
+    top: 0px;
+
+    filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.56));
+}
+
+.float-image {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 944px;
+    top: 191px;
+
+}
+
+@media screen and (max-width: 768px){
+    .bg-size {
+        height: 45vh;
+    }
+
+    .welcome {
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 96px;
+        top: 315px;
+    }
+    
+    .welcome2 {
+        position: absolute !important;
+        width: auto !important;
+        height: 54px !important;
+        left: auto !important;
+        top: 315px !important;
+    }
+    
+    .text {
+        font-size: 16px !important;
+    }
+
+    .text2 {
+        font-size: 16px !important;
+    }
+}
+
+.welcome {
+    position: absolute;
+    width: 661px;
+    height: 73px;
+    left: 92px;
+    top: 226px; 
+}
+
+.welcome2 {
+    position: absolute;
+    width: 643px;
+    height: 54px;
+    left: 96px;
+    top: 315px;
+}
+
+.welcome3 {
+    position: absolute;
+    width: 542px;
+    height: 59px;
+    left: 96px;
+    top: 385px;
+}
+
+.text {
+    background: -webkit-linear-gradient(316deg, #CD9CF2 0%, #CD9CF2 30%, #F6F3FF 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Yeseva One', cursive;
+    font-style: 400;
+    font-weight: normal;
+    font-size: 48.5513px;
+    line-height: 56px;
+
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.text2 {
+    background: -webkit-linear-gradient(113deg, #ffffff 10%, #2FF3FF 50%, #2FF3FF 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-shadow: 0px 2px 5px #000000;
+}

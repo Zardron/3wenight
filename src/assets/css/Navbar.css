@@ -1,0 +1,471 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 99.8%;
+    position: absolute;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(47, 47, 47, 0.5);
+    border: 1px solid #74FFD5;
+    backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-width: 1500px;
+  }
+  
+  .navbar-logo {
+    width: 80px;
+    cursor: pointer;
+  }
+
+  .logo-size {
+    position: absolute;
+    width: 340px;
+    height: 150px;
+    left: -40px;
+    top: -23px;
+    filter: drop-shadow(0px 4.93023px 4.93023px #000000);
+  }
+  
+  .fa-typo3 {
+    margin-left: 0.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 60vw;
+    justify-content: end;
+    margin-right: 2rem;
+  }
+  
+  .nav-item {
+    height: 80px;
+  }
+  
+  .nav-items {
+    display: none;
+  }
+  
+  .nav-links {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(11, auto);
+    grid-gap: 10px;
+    height: 100%;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
+  }
+  
+  
+  .btn-login {
+    background: linear-gradient(90deg, #E520FD 0%, #E520FD 0.01%, #F5576C 100%);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    display: grid;
+    grid-gap: 10px;
+    height: 23px;
+    width: 90px;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
+    box-shadow: 1px 3px 10px #F0459C;
+    border-radius: 20px;
+    margin-top: 30px;
+    top: -1px;
+    right: 360px;
+    position: absolute;
+  }
+
+  .btn-register {
+    background: linear-gradient(90deg, #92FE9D 0%, #00C9FF 100%);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    display: grid;
+    grid-gap: 10px;
+    height: 23px;
+    width: 90px;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
+    box-shadow: 1px 3px 10px #00C9FF;
+    border-radius: 20px;
+    margin-top: 30px;
+    top: -1px;
+    right: 260px;
+    position: absolute;
+  }
+
+  .nav-linkss {
+    display: none;
+  }
+  
+  .nav-links:hover {
+    color: #00FFB2;
+    transition: all 0.2s ease-out;
+  }
+  
+  .fa-bars {
+    color: #fff;
+    top: 0;
+  }
+  
+  .nav-links-mobile {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  .far {
+    padding-right: 4px;
+    font-size: 17px;
+    padding-bottom: 4px;
+  }
+
+  .flag1 {
+    position: absolute;
+    top: 28px;
+    right: 208px;
+    
+  }
+  .flag2 {
+    position: absolute;
+    top: 18px;
+    right: 149px;
+    
+  }
+  .flag3 {
+    position: absolute;
+    top: 28px;
+    right: 115px;
+    
+  }
+  .flag4 {
+    position: absolute;
+    top: 28px;
+    right: 70px;
+    
+  }
+  .flag5 {
+    position: absolute;
+    top: 28px;
+    right: 25px;
+    
+  }
+
+  .flag1-m, .flag2-m, .flag3-m, .flag4-m, .flag5-m  {
+    display: none;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .NavbarItems {
+      position: relative;
+    }
+  
+    .nav-items {
+      display: unset;
+    }
+
+    .nav-item {
+      height: auto;
+    }
+  
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 60px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  
+    .nav-menu.active {
+      background: rgba(47, 47, 47, 0.5);
+      border: 1px solid #74FFD5;
+      backdrop-filter: blur(20px);
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+      padding: 0 0;
+      align-items: center;
+      padding-top: 0px;
+      height: auto !important;
+      padding-bottom: 20px;
+    }
+  
+    .nav-links {
+      align-items: center;
+      padding: 1rem;
+      width: auto;
+      display: table;
+      font-family: 'Work Sans', sans-serif;
+      height: 20px;
+    }
+  
+    .nav-links:hover {
+      background-color: #fff;
+      color: #242424;
+      border-radius: 0;
+    }
+  
+    .nav-linkss {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+  
+    .nav-linkss:hover {
+      background-color: #fff;
+      color: #242424;
+      border-radius: 0;
+    }
+  
+    .navbar-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(6%, 6%);
+    }
+  
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 6px;
+      right: -8px;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+  
+    .fa-times {
+      color: #fff;
+      font-size: 2rem;
+    }
+  
+    .nav-links-mobile:hover {
+      background: #fff;
+      color: #242424;
+      transition: 250ms;
+    }
+  
+    .nav-menu2 {
+      display: none;
+    }
+
+    .btn-login {
+      top: unset;
+      right: unset;
+      position: unset;
+    }
+
+    .btn-register {
+      top: unset;
+      right: unset;
+      position: unset;
+    }
+
+    .flag1-m  {
+      top: auto;
+      right: 265px;
+      position: absolute;
+      display: unset;
+    }
+
+    .flag2-m  {
+      top: 620px;
+      right: 205px;
+      position: absolute;
+      display: unset;
+    }
+
+    .flag3-m  {
+      top: 630px;
+      right: 171px;
+      position: absolute;
+      display: unset;
+    }
+
+    .flag4-m  {
+      top: 630px;
+      right: 123px;
+      position: absolute;
+      display: unset;
+    }
+
+    .flag5-m  {
+      top: 630px;
+      right: 75px;
+      position: absolute;
+      display: unset;
+    }
+
+    .flag1, .flag2, .flag3, .flag4, .flag5  {
+      margin-top: auto;
+      margin-right: 30px;
+    }
+     
+  }   
+
+  @media screen and (max-width: 414px){
+    .logo-size{
+        width: 210px;
+        height: 150px;
+    }
+    .flag1 {
+      margin-top: auto;
+      margin-right: 30px;
+      position: absolute;
+      right: 145px;
+    }
+
+    .flag2 {
+      margin-top: auto;
+      margin-right: 30px;
+      position: absolute;
+      right: 102px;
+    }
+
+    .flag3 {
+      margin-top: auto;
+      margin-right: 30px;
+      right: 85px;
+      position: absolute;
+    }
+
+    .flag4 {
+      margin-top: auto;
+      margin-right: 30px;
+      right: 55px;
+      position: absolute;
+    }
+
+    .flag5 {
+      margin-top: auto;
+      margin-right: 30px;
+      position: absolute;
+    }
+  }
+
+  @media screen and (max-width: 320px){
+    .logo-size{
+        width: 180px;
+        height: 150px;
+    }
+    .flag1 {
+      margin-top: auto;
+      margin-right: 30px;
+      position: absolute;
+      right: 140px;
+    }
+
+    .flag2 {
+      margin-top: auto;
+      margin-right: 30px;
+      position: absolute;
+      right: 97px;
+    }
+
+    .flag3 {
+      margin-top: auto;
+      margin-right: 30px;
+      right: 80px;
+      position: absolute;
+    }
+
+    .flag4 {
+      margin-top: auto;
+      margin-right: 30px;
+      right: 50px;
+      position: absolute;
+    }
+
+    .flag5 {
+      margin-top: auto;
+      margin-right: 25px;
+      position: absolute;
+    }
+  }
+
+  @media screen and (max-width: 280px){
+    .logo-size{
+        width: 170px;
+        height: 150px;
+    }
+    .flag1 {
+      margin-top: auto;
+      margin-right: 30px;
+      position: absolute;
+      right: 120px;
+      width: 24px;
+      top: 30px;
+    }
+
+    .flag2 {
+      margin-top: auto;
+      margin-right: 30px;
+      position: absolute;
+      right: 88px;
+      width: 38px;
+      top: 23px;
+
+    }
+
+    .flag3 {
+      margin-top: auto;
+      margin-right: 30px;
+      right: 70px;
+      position: absolute;
+      width: 20px;
+      top: 30px;
+    }
+
+    .flag4 {
+      margin-top: auto;
+      margin-right: 30px;
+      right: 45px;
+      position: absolute;
+      width: 20px;
+      top: 30px;
+    }
+
+    .flag5 {
+      margin-top: auto;
+      margin-right: 25px;
+      position: absolute;
+      width: 20px;
+      top: 30px;
+    }
+  }
