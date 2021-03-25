@@ -5,6 +5,7 @@ import Carousel from '../../src/scenes/components/Carousel'
 import MusicPlayer from './MusicPlayer';
 import BannerCarousel from '../../src/scenes/components/BannerCarousel'
 import EventCarousel from '../../src/scenes/components/EventCarousel'
+import Footer from '../../src/scenes/components/Footer'
 
 
 class Home extends Component {
@@ -27,12 +28,10 @@ class Home extends Component {
 
                 <div className="event-container">
                     <p className="event-title">EVENT OF THE MONTH</p>
-
-                   
-                      
                 </div>
                 <EventCarousel />
 
+                <Footer />
             </div>
             
             </>

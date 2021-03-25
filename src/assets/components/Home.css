@@ -61,8 +61,8 @@
     margin-left: auto;
     display: grid;
     grid-template-columns: 330px auto 1rem;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 147px;
+    padding-right: 145px;
     padding-top: 10px;
     width: auto;
 }
@@ -156,6 +156,10 @@
         font-size: auto;
         text-align: center;
     }
+}
+
+.footer {
+    padding-top: 25px;
 }
 
 @media screen and (max-width: 1024px){

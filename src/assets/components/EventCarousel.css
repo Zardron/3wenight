@@ -7,7 +7,10 @@ a{
 	border: 1px solid #0d4f5f;
 	border-radius: 5px;
 	padding: 10px;
+	padding-top: 23px;
 	filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.685));
+
+	
 }
 .slide-img{
 	height: 300px;
@@ -21,10 +24,11 @@ a{
 }
 .detail-box{
 	width: 100%;
-display: flex;
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	box-sizing: border-box;
 	font-family: calibri;
 }
@@ -39,11 +43,14 @@ display: flex;
 	letter-spacing: 0.5px;
 	padding-right: 8px;
 	font-size: 20px;
+	height: 40px;
 }
 .type span{
+	padding-top: 5px;
 	color: white;
 	font-size: 14px;
-	text-align: justify;	
+	text-align: justify;
+	height: 60px;	
 }
 .price{
 	color: #333333;
@@ -123,7 +130,112 @@ display: flex;
 	padding-bottom: 30px;
 }
 
+.tag-size {
+	width: 160px;
+	height: 140px;
+	border-top-left-radius: 5px
+}
+
 /* .slick-arrow {
 	display: none !important;
 } */
- 
+
+.event-tag {
+	position: absolute;
+    width: 82px;
+    top: 20px;
+    right: 88px;
+}
+
+.event-date {
+	position: absolute;
+    left: 60px;
+    top: -27px;
+}
+
+.event-date-details {
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px !important;
+
+	color: #FFFFFF;
+
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.event-time {
+	position: absolute;
+    left: 6px;
+    top: 40px;
+    width: 150px;
+}
+
+.event-place {
+	position: absolute;
+    left: 7px;
+    top: 60px;
+    width: 150px;
+}
+
+.tag-details {
+	position: absolute;
+    left: 2px;
+    top: 35px;
+}
+
+.tag-props {
+
+	font-style: normal;
+	font-weight: bold;
+	font-size: 44px !important;
+	line-height: 51px;
+	
+	color: #FFFFFF;
+	
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fa-color {
+	color: #92FE9D;
+}
+
+.time-details {
+	font-size: 12px !important;
+	vertical-align: middle;
+}
+
+
+@media screen and (max-width: 1024px){
+	.spacing {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 30px;
+	}
+
+	.event-container-carousel {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+
+	.event-title {
+		width: 100%;
+	}
+
+	.event-container {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 30px;
+		width: 100%;
+	}
+
+	.type span {
+		height: 120px !important;
+	}
+
+}
+
