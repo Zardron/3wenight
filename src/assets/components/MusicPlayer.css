@@ -18,13 +18,14 @@ body {
 
 .c-player {
     display: block;
-    background-color: #313131;
+    background: rgba(47, 47, 47, 0.5);
     display: block;
     margin: 0px auto;
     padding: 20px;
     border-radius: 16px;
     width: 100%;
-    box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+    border: 1px solid #888888;
+    height: auto;
 }
 
 .c-player > h4 {
@@ -53,25 +54,22 @@ body {
 }
 
 .c-player--details .details-img img {
-    display: block;
-    margin: 50px auto;
-    width: 80%;
-    max-width: 80%;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
+    margin: 10px auto;
+    width: 100%;
+    max-width: 100%;
+    height: 20 0px;
 }
 
 .c-player--details .details-title {
     color: #EEE;
-    font-size: 28px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
+    font-size: 16px;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .c-player--details .details-artist {
     color: #AAA;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -2px -2px 4px rgba(255,255,255,0.4);
+    font-size: 14px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -80,7 +78,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
 .c-player--controls .play-btn {
@@ -90,8 +87,8 @@ body {
     border-radius: 50%;
     border: none;
     outline: none;
-    background-color: #313131;
-    color: #888888;
+    background-color: transparent;
+    color: #24FF00 ;
     font-size: 24px;
     cursor: pointer;
 }
@@ -101,6 +98,86 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    color: #888;
+    color: #24FF00 ;
     font-size: 18px;
 }
+
+.img-player{
+    height: 190px;
+}
+
+@media screen and (max-width: 768px)
+{
+    .c-player {
+        width: 80%;
+        padding: 20px;
+    }
+    .c-player--details .details-img {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .c-player--controls .play-btn {
+        font-size: 14px;
+    }
+
+    .c-player--details .details-title {
+        font-size: 14px;
+    }
+
+    .img-player{
+        height: 100px;
+    }
+
+    .c-player--controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+    }
+}
+
+
+@media screen and (max-width: 1024px)
+{
+    .c-player {
+        width: 80%;
+        padding: 20px;
+    }
+    .c-player--details .details-img {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .c-player--controls .play-btn {
+        font-size: 12px;
+    }
+
+    .c-player--details .details-title {
+        font-size: 12px;
+    }
+
+    .img-player{
+        height: 100px;
+    }
+
+    .c-player--controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+    }
+}
+
+/* .c {
+    position: absolute;
+    left: 35px;
+    top: 380px;
+}
+
+audio{
+    width: 280px;
+    background-color: black !important;
+} */

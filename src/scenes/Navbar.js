@@ -33,7 +33,7 @@ export default class Navbar extends Component {
                 <i className={this.state.classChange ? 'fas fa-times' : 'fas fa-bars'} />
                 </div>
                 <ul className={this.state.classChange ? 'nav-menu active' :  'nav-menu'}>
-                <li className='nav-item'><Link to='/home' className='nav-links'>HOME</Link></li>
+                <li className='nav-item'><Link to='/' className='nav-links'>HOME</Link></li>
                 <li className='nav-item'><Link to='/event' className='nav-links'>EVENT</Link></li>
                 <li className='nav-item'><Link to='/QandA' className='nav-links'>Q & A</Link></li>
                 <li className='nav-item'><Link to='/blog' className='nav-links'>BLOG</Link></li>
