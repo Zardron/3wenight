@@ -309,10 +309,10 @@
     .menu-icon {
       display: block;
       position: absolute;
-      top: 6px;
+      top: -1px;
       right: -8px;
       transform: translate(-100%, 60%);
-      font-size: 1.8rem;
+      font-size: 2.8rem;
       cursor: pointer;
     }
 

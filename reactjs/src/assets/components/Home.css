@@ -13,7 +13,7 @@
 
 .banner-size {
     position: absolute;
-    height: 880px;
+    height: 870px;
     left: 0px;
     top: 0px;
     width: 100%;
@@ -22,7 +22,7 @@
 }
 
 .girl-position {
-    height: 880px;
+    height: 870px;
 }
 
 .girl-size{
@@ -32,7 +32,7 @@
 
 
 .content {
-    margin-top: 880px;
+    margin-top: 870px;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -61,7 +61,7 @@
     margin-left: auto;
     display: grid;
     grid-template-columns: 330px auto 1rem;
-    padding-left: 147px;
+    padding-left: 145px;
     padding-right: 145px;
     padding-top: 10px;
     width: auto;
