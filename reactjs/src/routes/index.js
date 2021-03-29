@@ -12,6 +12,8 @@ import Malaysia from '../../src/scenes/pages/Malaysia';
 import China from '../scenes/pages/China';
 import Vietnam from '../scenes/pages/Vietnam';
 import Thailand from '../../src/scenes/pages/Thailand';
+import GuestRoute from '../scenes/components/GuestRoute';
+import AuthRoute from '../scenes/components/AuthRoute';
 
 
 class Router extends Component {
@@ -23,13 +25,13 @@ class Router extends Component {
 				<Route exact path="/QandA" component={QandA} />
 				<Route exact path="/blog" component={Blog} />
 				<Route exact path="/contact" component={Contact} />
-				<Route exact path="/login" component={Login} />
-				<Route exact path="/register" component={Register} />
-				<Route exact path="/singapore" component={Singapore} />
-				<Route exact path="/malaysia" component={Malaysia} />
-				<Route exact path="/china" component={China} />
-				<Route exact path="/vietnam" component={Vietnam} />
-				<Route exact path="/thailand" component={Thailand} />
+				<GuestRoute exact path="/login" component={Login} />
+				<GuestRoute exact path="/register" component={Register} />
+				<AuthRoute exact path="/singapore" component={Singapore} />
+				<AuthRoute exact path="/malaysia" component={Malaysia} />
+				<AuthRoute exact path="/china" component={China} />
+				<AuthRoute exact path="/vietnam" component={Vietnam} />
+				<AuthRoute exact path="/thailand" component={Thailand} />
 			</BrowserRouter>
 		)
 	}

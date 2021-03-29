@@ -169,3 +169,23 @@
 }
 
 
+.links {
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    white-space: nowrap;
+    color: var(--color-text);
+    margin-right: 30px;
+}
+
+.links::before,
+.links::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+

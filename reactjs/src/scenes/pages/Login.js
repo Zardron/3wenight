@@ -7,15 +7,19 @@ import BannerCarousel from '../components/BannerCarousel';
 import {InputLabel, FormControl, FilledInput, Button, IconButton, InputAdornment } from '@material-ui/core';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import axios from "axios";
+import cookie from 'js-cookie';
+import { connect } from 'react-redux';
 
-export default class Login extends Component {
+class Login extends Component {
 
     constructor(props){
-        super(props)
+        super(props);
 
         this.state = {
-            username: '',
-            password: '',
+            username: "",
+            password: "",
+            errors: {},
             submitted: false,
             showPassword: false,
         }
@@ -23,11 +27,12 @@ export default class Login extends Component {
         this.handleClickShowPassword = this.handleClickShowPassword.bind(this)
     }
 
-    HandleChange = (event) => {
+    HandleChange = (e) => {
             
-        this.setState({
-            [event.target.name]: event.target.value
-        })
+        e.preventDefault();
+        const name = e.target.name;
+        const value = e.target.value;
+        this.setState({ [name]: value });
 
     }
 
@@ -35,28 +40,50 @@ export default class Login extends Component {
        this.setState({ showPassword: !this.state.showPassword })
     }
 
-    handleSubmit = (event) => {
-        event.preventDefault();
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const data = { username: this.state.username, password: this.state.password };
 
-        this.setState({ submitted: true });
-       
-    }
+        axios
+        .post("http://localhost:8000/api/auth/login", data)
+        .then(res => {
+            cookie.set("token", res.data.access_token);
+            this.props.setLogin(res.data.user);
+            this.props.history.push("/singapore");
+        })
+        .catch(e => this.setState({ errors: e.response.data.errors }));
 
+        this.setState({submitted: true});
+    };
 
     render() {
         const { username, password, submitted } = this.state;
+        const error = this.state.errors;
+
+        setTimeout(
+            function() {
+                this.setState({ errors: "" });
+            }
+            .bind(this),
+            10000
+        );
+
         return (
             <>
             <div className="page-content">
                 <Navbar />
 
                 <div className="login-border">
-                <form className="login-container" onClick={this.handleSubmit}>
+                <form className="login-container" onSubmit={this.handleSubmit}>
                 <div className="login-label-position">
                     <div className="spacing"></div>
                     <div className="spacing"></div>
                     <span className="login-label">LOGIN</span>
-
+                    <div className="spacing"></div>
+                    {
+                       
+                    }
+                    {error.errors ? <p className="MuiInputBase-input-error" id="hideDiv">{error.errors}</p> : ""}
                     <div className="spacing"></div>
                     <div className="username-position">
                     <FormControl style={{width: '80%'}} error={submitted && !password} variant="filled">
@@ -128,3 +155,13 @@ export default class Login extends Component {
         )
     }
 }
+
+const mapDispatchToProps = dispatch => {
+    return {
+      setLogin: user => dispatch({ type: "SET_LOGIN", payload: user })
+    };
+  };
+  export default connect(
+    null,
+    mapDispatchToProps
+  )(Login);

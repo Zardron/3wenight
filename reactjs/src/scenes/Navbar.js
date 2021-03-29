@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import '../../src/assets/css/Navbar.css'
-import DeCarousel from '../../src/scenes/components/Carousel'
+import { connect } from 'react-redux';
+import cookie from 'js-cookie';
 
-export default class Navbar extends Component {
+class Navbar extends Component {
 
     constructor(props) {
         super(props)
@@ -20,6 +21,13 @@ export default class Navbar extends Component {
        this.setState({ classChange: !this.state.classChange })
     }
 
+    handleLogout = (event) => {
+        event.preventDefault()
+
+        cookie.remove("token");
+        this.props.logout();
+    }
+
     render() {
         return (
             <>
@@ -33,13 +41,25 @@ export default class Navbar extends Component {
                 <i className={this.state.classChange ? 'fas fa-times' : 'fas fa-bars'} />
                 </div>
                 <ul className={this.state.classChange ? 'nav-menu active' :  'nav-menu'}>
-                <li className='nav-item'><Link to='/' className='nav-links'>HOME</Link></li>
-                <li className='nav-item'><Link to='/event' className='nav-links'>EVENT</Link></li>
-                <li className='nav-item'><Link to='/QandA' className='nav-links'>Q & A</Link></li>
-                <li className='nav-item'><Link to='/blog' className='nav-links'>BLOG</Link></li>
-                <li className='nav-item'><Link to='/contact' className='nav-links'>CONTACT</Link></li>
-                <li className='li-height'><Link to='/login' className='btn-login'>LOGIN</Link></li>
-                <li className='li-height'><Link to='/register' className='btn-register'>REGISTER</Link></li>
+                <li className='nav-item'><Link to='/' className='nav-links links links--elara'>HOME</Link></li>
+                <li className='nav-item'><Link to='/event' className='nav-links links links--elara'>EVENT</Link></li>
+                <li className='nav-item'><Link to='/QandA' className='nav-links links links--elara'>Q & A</Link></li>
+                <li className='nav-item'><Link to='/blog' className='nav-links links links--elara'>BLOG</Link></li>
+                <li className='nav-item'><Link to='/contact' className='nav-links links links--elara'>CONTACT</Link></li>
+                {
+                    !this.props.loggedIn ? 
+                    (
+                    <Fragment>
+                        <li className='li-height'><Link to='/login' className='btn-login'>LOGIN</Link></li>
+                        <li className='li-height'><Link to='/register' className='btn-register'>REGISTER</Link></li>
+                    </Fragment>
+                    )
+                    :
+                    <Fragment>
+                        <li className='li-height'><Link to='/login' className='btn-logins'>WELCOME: {this.props.firstname}</Link></li>
+                        <li className='li-height'><Link to='/logout' className='btn-register' onClick={this.handleLogout}>Logout</Link></li>
+                    </Fragment>
+                }
                 </ul>
 
                 {/* MOBILE VIEW */}
@@ -55,3 +75,18 @@ export default class Navbar extends Component {
         )
     }
 }
+
+const mapStateToProps = state => {
+    return {
+      loggedIn: state.auth.loggedIn,
+      firstname: state.auth.user.firstname
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+      logout: () => dispatch({type:'SET_LOGOUT'})
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)

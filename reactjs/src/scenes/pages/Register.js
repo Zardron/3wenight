@@ -7,19 +7,23 @@ import BannerCarousel from '../components/BannerCarousel';
 import {InputLabel, FormControl, FilledInput, Button, IconButton, InputAdornment } from '@material-ui/core';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import axios from 'axios';
+import cookie from 'js-cookie';
+import { connect } from 'react-redux';
 
-export default class Register extends Component {
+class Register extends Component {
 
     constructor(props){
         super(props);
 
         this.state = {
-            firstname: '',
-            lastname: '',
-            email: '',
-            username: '',
-            password: '',
-            cpassword: '',
+            firstname: "",
+            lastname: "",
+            email: "",
+            username: "",
+            password: "",
+            cpassword: "",
+            errors: {},
             submitted: false,
             showPassword: false,
         }
@@ -30,8 +34,20 @@ export default class Register extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
+        const data = {firstname: this.state.firstname,lastname: this.state.lastname,email: this.state.email,username: this.state.username, password: this.state.password
+        };
+
+        axios
+        .post("http://localhost:8000/api/auth/register", data)
+        .then(res => {
+            cookie.set("token", res.data.access_token);
+            this.props.setLogin(res.data.user);
+            this.props.history.push("/singapore");
+        })
+        .catch(e => this.setState({errors: e.response.data}));
+
         this.setState({submitted: true});
-    }
+    };
 
     handleChange = (event) => {
 
@@ -47,16 +63,18 @@ export default class Register extends Component {
 
     render() {
         const { firstname, lastname, email, username, password, cpassword, submitted } = this.state;
+        const error = this.state.errors
         return (
             <>
             <div className="register-content">
                 <Navbar />
 
-                <form className="register-container" onClick={this.handleSubmit}>
+                <form className="register-container" onSubmit={this.handleSubmit}>
 
                     <div className="register-label-position">
                         <div className="spacing"></div>
                         <span className="register-label">REGISTER</span>
+                        {error.errors ? <p className="MuiInputBase-input-error">{error.errors}</p> : ""}
                         <div className="spacing"></div>
                         <FormControl style={{width: '80%'}} variant="filled" error={(submitted && !firstname)}>
                         <InputLabel htmlFor="filled-adornment-firstname" className={submitted && !firstname ? 'MuiInputBase-input-error' : 'MuiInputBase-input'}>{(submitted && !firstname ? 'Firstname is required' : 'Firstname')}</InputLabel>
@@ -139,7 +157,7 @@ export default class Register extends Component {
 
                         <div className="reg-spacing"></div>
 
-                        <FormControl style={{width: '80%'}} error={submitted && !firstname} variant="filled">
+                        <FormControl style={{width: '80%'}} error={submitted && !cpassword} variant="filled">
                         <InputLabel htmlFor="filled-adornment-cpassword" className={submitted && !cpassword ? "MuiInputBase-input-error" : "MuiInputBase-input" }>{submitted && !cpassword ? 'Confirm password is required' : 'Confirm password'}</InputLabel>
                         <FilledInput
                             id="filled-adornment-cpassword"
@@ -190,3 +208,13 @@ export default class Register extends Component {
         )
     }
 }
+
+const mapDispatchToProps = dispatch => {
+    return {
+      setLogin: user => dispatch({ type: "SET_LOGIN", payload: user })
+    };
+  };
+  export default connect(
+    null,
+    mapDispatchToProps
+  )(Register);
