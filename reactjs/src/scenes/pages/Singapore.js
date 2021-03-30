@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
 import Navbar from '../Navbar'
-import { connect } from "react-redux";
-import cookies from "js-cookie";
+import PageBanner from '../components/PageBanner';
+import Footer from '../components/Footer'
 
 class Singapore extends Component {
     render() {
         return (
-            <div>
+            <>
+                <div className="page-content">
                 <Navbar />
-                <img src="./country/singapore.png" style={{width: '100%'}}></img>
-            </div>
+                <img src="./country/singapore.png" className="img-size"></img>
+                <marquee className="marquee-details"><br></br>Join us on our afterdark/nightlife telegram group for singapore <span className="marquee-color">(t.me/sgafterdark)</span>, china/hk <span className="marquee-color">(t.me/cnhkafterdark)</span>, thailand <span className="marquee-color">(t.me/thaiafterdark)</span>, malaysia <span className="marquee-color">(t.me/myafterdark)</span>, vietnam <span className="marquee-color">(t.me/vietafterdark)</span></marquee>
+                
+               
+                <PageBanner />
+                
+                <Footer />
+                </div>
+            </>
         )
     }
 }

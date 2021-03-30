@@ -80,10 +80,8 @@ class Login extends Component {
                     <div className="spacing"></div>
                     <span className="login-label">LOGIN</span>
                     <div className="spacing"></div>
-                    {
-                       
-                    }
-                    {error.errors ? <p className="MuiInputBase-input-error" id="hideDiv">{error.errors}</p> : ""}
+
+                    {error.result ? <p className="MuiInputBase-input-error" id="hideDiv">{error.result}</p> : ""}
                     <div className="spacing"></div>
                     <div className="username-position">
                     <FormControl style={{width: '80%'}} error={submitted && !password} variant="filled">
@@ -161,7 +159,4 @@ const mapDispatchToProps = dispatch => {
       setLogin: user => dispatch({ type: "SET_LOGIN", payload: user })
     };
   };
-  export default connect(
-    null,
-    mapDispatchToProps
-  )(Login);
+  export default connect(null,mapDispatchToProps)(Login);

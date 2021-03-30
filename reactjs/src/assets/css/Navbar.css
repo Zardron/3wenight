@@ -61,7 +61,13 @@
   .nav-items {
     display: none;
   }
-  
+
+  .navbar__link--active {
+    color: #00FFB2 !important;
+    border-bottom: 3px solid #00FFB2;
+    transition: border-bottom .5s ease-in-out;
+  }
+
   .nav-links {
     color: white;
     display: flex;
