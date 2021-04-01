@@ -97,6 +97,11 @@ a{
 	visibility: visible;
 	animation:fade 0.5s;
 }
+
+.MuiGrid-spacing-xs-3 {
+    width: calc(100% + 24px);
+    margin: unset !important;
+}
  
 @keyframes fade{
 	0%{
@@ -118,7 +123,6 @@ a{
 .event-container-carousel {
 	padding-left: 70px;
 	padding-right: 70px;
-	padding-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 98%;
@@ -135,10 +139,6 @@ a{
 	height: 140px;
 	border-top-left-radius: 5px
 }
-
-/* .slick-arrow {
-	display: none !important;
-} */
 
 .event-tag {
 	position: absolute;
@@ -205,6 +205,17 @@ a{
 	vertical-align: middle;
 }
 
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
 
 @media screen and (max-width: 1024px){
 	.spacing {
@@ -214,8 +225,8 @@ a{
 	}
 
 	.event-container-carousel {
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-left: 40px;
+		padding-right: 40px;
 		padding-top: 30px;
 		margin-left: auto;
 		margin-right: auto;
@@ -233,8 +244,20 @@ a{
 		width: 100%;
 	}
 
+	.event-titles {
+		font-size: 16px !important;
+	}
+
+	.event-details {
+		font-size: 12px !important;
+	}
+
 	.type span {
-		height: 120px !important;
+		height: 140px !important;
+	}
+
+	.slick-dots {
+		display: none !important;
 	}
 
 }

@@ -28,16 +28,11 @@ export default class EventCarousel extends Component {
         const settings = {
             infinite: true,
             slidesToShow: 3,
-            
+            dots: true,
             autoplay: true,
-            speed: 3000,
+            speed: 1000,
             autoplaySpeed: 4000,
-            prevArrow: false,
-            nextArrow: false,
-            cssEase: "linear",
             responsive: [
-           
-            
             {
             breakpoint: 1250,
             settings: {
@@ -60,7 +55,7 @@ export default class EventCarousel extends Component {
 
         <>
         <div className="event-container-carousel">
-        <Slider {...settings} arrows={false}>
+        <Slider {...settings} arrows={true}>
             {this.state.events.map(details => (
             
                 <div className="spacing">
@@ -81,12 +76,14 @@ export default class EventCarousel extends Component {
                                             <span className="event-place"><i className="fal fa-map-marker-alt fa-color"></i> <span className="time-details">&nbsp;{details.place}</span></span>
                                         </p>
                                     </div>
-                                    <a href="#" >{details.title}</a>
+                                    <a href="#" className="event-titles">{details.title}</a>
                                     <span className="event-details">{details.details}</span>
                                 </div>
                             </div>
                         </div>
                 </div>
+
+
             ))}
         </Slider>
         

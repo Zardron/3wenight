@@ -26,9 +26,11 @@ class Register extends Component {
             errors: {},
             submitted: false,
             showPassword: false,
+            showCPassword: false,
         }
 
         this.handleClickShowPassword = this.handleClickShowPassword.bind(this)
+        this.handleClickShowCPassword = this.handleClickShowCPassword.bind(this)
     }
 
     handleSubmit = (event) => {
@@ -59,6 +61,10 @@ class Register extends Component {
 
     handleClickShowPassword() {
         this.setState({ showPassword: !this.state.showPassword })
+    }
+    
+    handleClickShowCPassword() {
+        this.setState({ showCPassword: !this.state.showCPassword })
     }
 
     render() {
@@ -163,7 +169,7 @@ class Register extends Component {
                             id="filled-adornment-cpassword"
                             name="cpassword"
                             variant="filled"
-                            type={this.state.showPassword ? 'text' : 'password'}
+                            type={this.state.showCPassword ? 'text' : 'password'}
                             color="secondary"
                             onChange={this.handleChange}
                             value={this.cpassword}
@@ -171,9 +177,9 @@ class Register extends Component {
                                 <InputAdornment position="end">
                                 <IconButton
                                     aria-label="toggle password visibility"
-                                    onClick={this.handleClickShowPassword}
+                                    onClick={this.handleClickShowCPassword}
                                 >
-                                    {this.state.showPassword ? <Visibility /> : <VisibilityOff />}
+                                    {this.state.showCPassword ? <Visibility /> : <VisibilityOff />}
                                 </IconButton>
                                 </InputAdornment>
                             }
