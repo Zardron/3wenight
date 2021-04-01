@@ -11,9 +11,11 @@ class Navbar extends Component {
 
         this.state = {
             classChange: false,
+            FAChangeClass: false,
         }
 
         this.handleMenu = this.handleMenu.bind(this)
+        this.changeClass = this.changeClass.bind(this)
     }
 
     handleMenu() {
@@ -28,6 +30,10 @@ class Navbar extends Component {
         this.props.logout();
     }
 
+    changeClass() {
+        this.setState({ FAChangeClass: !this.state.FAChangeClass })
+    }
+
     render() {
         return (
             <>
@@ -35,6 +41,18 @@ class Navbar extends Component {
                 <NavLink  to="/" className="navbar-logo">
                         <img src="3wenight2.png" className="logo-size" alt="3webg"></img>
                 </NavLink >
+
+                <div className="countryMobile">
+                <i onClick={this.changeClass} className={this.state.FAChangeClass ? "fal fa-chevron-up faPosition": "fal fa-chevron-down faPosition"}></i>
+                <ul className={this.state.FAChangeClass ? 'nav-menu active' :  'nav-menu'}>
+                <li className='nav-item'><NavLink exact activeClassName="navbar__link--active"  to='/singapore' className='nav-links links links--elara'><img src="1.png" alt="sg"></img></NavLink ></li>
+                <li className='nav-item'><NavLink activeClassName="navbar__link--active"  to='/malaysia' className='nav-links links links--elara'><img src="2.png" alt="my"></img></NavLink ></li>
+                <li className='nav-item'><NavLink  activeClassName="navbar__link--active" to='/china' className='nav-links links links--elara'><img src="3.png" alt="ch"></img></NavLink ></li>
+                <li className='nav-item'><NavLink activeClassName="navbar__link--active" to='/vietnam' className='nav-links links links--elara'><img src="4.png" alt="vt"></img></NavLink ></li>
+                <li className='nav-item'><NavLink activeClassName="navbar__link--active" to='/thailand' className='nav-links links links--elara'><img src="5.png" alt="th"></img></NavLink ></li>
+                </ul>
+                </div>
+                
 
                 {/* DESKTOP VIEW */}
                 <div className='menu-icon' onClick={this.handleMenu}>
@@ -64,11 +82,14 @@ class Navbar extends Component {
 
                 {/* MOBILE VIEW */}
 
-                <NavLink  to='/singapore'><img src="1.png" className="flag1"  alt="sg"></img></NavLink >
-                <NavLink  to='/malaysia'><img src="2.png" className="flag2"  alt="my"></img></NavLink >
-                <NavLink  to='/china'><img src="3.png" className="flag3"  alt="ch"></img></NavLink >
-                <NavLink  to='/vietnam'><img src="4.png" className="flag4"  alt="vt"></img></NavLink >
-                <NavLink  to='/thailand'><img src="5.png" className="flag5"  alt="th"></img></NavLink >
+                <div className="desktop">
+                    <NavLink to='/singapore'><img src="1.png" className="flag1"  alt="sg"></img></NavLink >
+                    <NavLink to='/malaysia'><img src="2.png" className="flag2"  alt="my"></img></NavLink >
+                    <NavLink to='/china'><img src="3.png" className="flag3"  alt="ch"></img></NavLink >
+                    <NavLink to='/vietnam'><img src="4.png" className="flag4"  alt="vt"></img></NavLink >
+                    <NavLink to='/thailand'><img src="5.png" className="flag5"  alt="th"></img></NavLink >
+                </div>
+                
             </nav>
             {/* <DeCarousel /> */}
             </>
@@ -79,7 +100,7 @@ class Navbar extends Component {
 const mapStateToProps = state => {
     return {
       loggedIn: state.auth.loggedIn,
-      firstname: state.auth.user.firstname
+      firstname: state.auth.user.username
     };
 };
 

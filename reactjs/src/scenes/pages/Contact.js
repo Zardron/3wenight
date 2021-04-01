@@ -4,8 +4,7 @@ import Footer from '../components/Footer'
 import '../../assets/components/Register.css'
 import PageBanner from '../../scenes/components/PageBanner';
 import {InputLabel, FormControl, FilledInput, Button, IconButton, InputAdornment } from '@material-ui/core';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import Slider from "react-slick";
 import axios from 'axios';
 import cookie from 'js-cookie';
 import { connect } from 'react-redux';
@@ -25,7 +24,18 @@ class Contact extends Component {
             errors: {},
             submitted: false,
             showPassword: false,
+
+            banner: [
+                {src: './banner/1.gif'},
+                {src: './banner/2.gif'},
+                {src: './banner/3.jpg'},
+                {src: './banner/4.gif'},
+                {src: './banner/5.gif'},
+                {src: './banner/6.gif'},
+                {src: './banner/7.gif'},
+              ]
         }
+        
 
         this.handleClickShowPassword = this.handleClickShowPassword.bind(this)
     }
@@ -63,6 +73,37 @@ class Contact extends Component {
     render() {
         const { firstname, lastname, email, username, password, cpassword, submitted } = this.state;
         const error = this.state.errors
+
+        const settings = {
+            infinite: true,
+            slidesToShow: 3,
+            
+            autoplay: true,
+            speed: 3000,
+            autoplaySpeed: 4000,
+            prevArrow: false,
+            nextArrow: false,
+            cssEase: "linear",
+            responsive: [
+           
+            
+            {
+            breakpoint: 1250,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+            }
+            },
+            {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+            }
+        ]
+    };
         return (
             <>
             <div className="register-content">
@@ -145,7 +186,19 @@ class Contact extends Component {
 
                 <marquee className="marquee-details"><br></br>Join us on our afterdark/nightlife telegram group for singapore <span className="marquee-color">(t.me/sgafterdark)</span>, china/hk <span className="marquee-color">(t.me/cnhkafterdark)</span>, thailand <span className="marquee-color">(t.me/thaiafterdark)</span>, malaysia <span className="marquee-color">(t.me/myafterdark)</span>, vietnam <span className="marquee-color">(t.me/vietafterdark)</span></marquee>
                 
-                <PageBanner />
+                <div className="eventDesktopView">
+                    <PageBanner />
+                </div>
+
+                <div className="mobileView">
+                    <Slider {...settings} arrows={false}>
+                        {this.state.banner.map(banner => (
+                            <div>
+                                <img src={banner.src}  style={{width: '80%', marginLeft: '30px', marginRight: '30px'}}></img>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
 
                 <Footer />
             </div>

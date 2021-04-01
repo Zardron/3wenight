@@ -34,9 +34,9 @@
   .logo-size {
     position: absolute;
     width: 340px;
-    height: 150px;
-    left: -40px;
-    top: -23px;
+    height: 60px;
+    left: 0px;
+    top: 8px;
     filter: drop-shadow(0px 4.93023px 4.93023px #000000);
   }
   
@@ -213,6 +213,10 @@
   }
 
   .flag1-m, .flag2-m, .flag3-m, .flag4-m, .flag5-m  {
+    display: none;
+  }
+
+  .countryMobile {
     display: none;
   }
   
@@ -431,12 +435,23 @@
       margin-right: 30px;
     }
      
-  }   
+  } 
+  
 
-  @media screen and (max-width: 414px){
+  @media screen and (max-width: 540px){
+
+    .countryMobile{
+       display: unset;
+    }
+
+    .faPosition{
+      position: absolute;
+      left: 150px;
+    }
+
     .logo-size{
-        width: 210px;
-        height: 150px;
+        width: 140px;
+        height: 60px;
     }
     .flag1 {
       margin-top: auto;
@@ -471,12 +486,26 @@
       margin-right: 30px;
       position: absolute;
     }
+
+    .desktop {
+      display: none;
+    }
   }
 
   @media screen and (max-width: 320px){
+
+    .countryMobile{
+      display: unset;
+   }
+
+    .faPosition{
+      position: absolute;
+      left: 150px;
+    }
+
     .logo-size{
-        width: 180px;
-        height: 150px;
+      width: 130px;
+      height: 60px;
     }
     .flag1 {
       margin-top: auto;
@@ -514,9 +543,14 @@
   }
 
   @media screen and (max-width: 280px){
+
+    .countryMobile{
+      display: unset;
+   }
+
     .logo-size{
-        width: 170px;
-        height: 150px;
+        width: 125px;
+        height: 60px;
     }
     .flag1 {
       margin-top: auto;
@@ -601,4 +635,18 @@
 
 .links--elara:hover span {
     transform: translate3d(0, -2px, 0);
+}
+
+.mobileView{
+  display: none;
+}
+
+@media screen and (max-width: 515px){
+  .mobileView{
+      display: unset;
+  }
+
+  .eventDesktopView {
+      display: none;
+  }
 }
