@@ -27,11 +27,11 @@ class Router extends Component {
 				<Route exact path="/contact" component={Contact} />
 				<GuestRoute exact path="/login" component={Login} />
 				<GuestRoute exact path="/register" component={Register} />
-				<AuthRoute exact path="/singapore" component={Singapore} />
-				<AuthRoute exact path="/malaysia" component={Malaysia} />
-				<AuthRoute exact path="/china" component={China} />
-				<AuthRoute exact path="/vietnam" component={Vietnam} />
-				<AuthRoute exact path="/thailand" component={Thailand} />
+				<Route exact path="/singapore" component={Singapore} />
+				<Route exact path="/malaysia" component={Malaysia} />
+				<Route exact path="/china" component={China} />
+				<Route exact path="/vietnam" component={Vietnam} />
+				<Route exact path="/thailand" component={Thailand} />
 			</BrowserRouter>
 		)
 	}

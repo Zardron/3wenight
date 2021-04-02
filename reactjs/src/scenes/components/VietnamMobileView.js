@@ -8,15 +8,14 @@ class VietnamMobileView extends Component {
         super(props);
         this.state = {
           events: [
-            {src: './event/1.png', title: 'MANHATTAN', day: '7', date: '', time: '11:00PM - 3:00AM', place: 'Hanoi, Vietnam', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/2.png', title: 'ATLAS', day: '13', date: '', time: '11:00PM - 3:00AM', place: 'Hanoi, Vietnam', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/3.png', title: 'ASTOR BAR', day: '16', date: '', time: '11:00PM - 3:00AM', place: 'Hanoi, Vietnam', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/4.png', title: 'MANHATTAN', day: '18', date: '', time: '11:00PM - 3:00AM', place: 'Hanoi, Vietnam', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/5.png', title: 'ATLAS', day: '19', date: '', time: '11:00PM - 3:00AM', place: 'Hanoi, Vietnam', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/6.png', title: 'ASTOR BAR', day: '23', date: '', time: '11:00PM - 3:00AM', place: 'Hanoi, Vietnam', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/7.png', title: 'MANHATTAN', day: '26', date: '', time: '11:00PM - 3:00AM', place: 'Hanoi, Vietnam', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/8.png', title: 'ATLAS', day: '27', date: '', time: '11:00PM - 3:00AM', place: 'Hanoi, Vietnam', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/9.png', title: 'ASTOR BAR', day: '29', date: '', time: '11:00PM - 3:00AM', place: 'Hanoi, Vietnam', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
+            {src: 'https://www.youtube.com/embed/N0HxjX0D-mE', title: 'Lady Mia', day: '7', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/pbudYLCOuIM', title: 'Party on a yacht', day: '13', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/hnKXLJ5P4yM', title: 'Apocalypse Now Bar', day: '16', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/fuj3kLeWnSs', title: 'Apocalypse Now Bar', day: '18', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/4h1w6aTQ8Nk', title: 'Twilight Sky Bar City Overseeing', day: '19', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/aSA4LJIJ5zE', title: 'Fox Beer Lounge', day: '23', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/iBy_E1146JU', title: 'Fox Beer Lounge', day: '26', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/kcItiHi5Z1U', title: 'Voodoo Bar Night Club', day: '27', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
           ],
 
           banner: [
@@ -84,27 +83,24 @@ class VietnamMobileView extends Component {
             
                 <div className="spacing">
                         <div className="box">
-                            <div className="slide-img">
-                                <img alt="1" src={details.src} />
-                                <div className="overlay">
-                                    <a href="#" className="buy-btn">Read More</a>	
-                                </div>
-                            </div>
-                                <div className="detail-box">
-                                    <div className="type">
-                                    <div className="event-tag">
-                                        <img src="./tag.png" className="tag-size"></img>
-                                        <p className="tag-details">
-                                            <span className="event-date"><span className="event-date-details">{details.day}</span></span>
-                                            <span className="event-time"><i className="fal fa-clock fa-color"></i> <span className="time-details">{details.time}</span></span>
-                                            <span className="event-place"><i className="fal fa-map-marker-alt fa-color"></i> <span className="time-details">&nbsp;{details.place}</span></span>
-                                        </p>
+                                        <div className="slide-img">
+                                        <iframe width="100%" height="100%" src={details.src} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
-                                    <a href="#" >{details.title}</a>
-                                    <span className="event-details">{details.details}</span>
-                                </div>
-                            </div>
-                        </div>
+                                    <div className="detail-box">
+                                        <div className="type">
+                                            {/* <div className="event-tag">
+                                                <img src="./tag.png" className="tag-size"></img>
+                                                <p className="tag-details">
+                                                <span className="event-date"><span className="event-date-details">{details.day}</span></span>
+                                                <span className="event-time"><i className="fal fa-clock fa-color"></i> <span className="time-details">{details.time}</span></span>
+                                                <span className="event-place"><i className="fal fa-map-marker-alt fa-color"></i> <span className="time-details">&nbsp;{details.place}</span></span>
+                                                </p>
+                                            </div> */}
+                                                <a href="#" >{details.title}</a>
+                                                <span className="event-details">{details.details}</span>
+                                            </div>
+                                        </div>
+                                    </div>
                 </div>
             ))}
         </Slider>

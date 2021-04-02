@@ -12,15 +12,13 @@ class China extends Component {
         super(props);
         this.state = {
           events: [
-            {src: './event/1.png', title: 'MANHATTAN', day: '7', date: '', time: '11:00PM - 3:00AM', place: 'Beijing, China', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/2.png', title: 'ATLAS', day: '13', date: '', time: '11:00PM - 3:00AM', place: 'Beijing, China', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/3.png', title: 'ASTOR BAR', day: '16', date: '', time: '11:00PM - 3:00AM', place: 'Beijing, China', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/4.png', title: 'MANHATTAN', day: '18', date: '', time: '11:00PM - 3:00AM', place: 'Beijing, China', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/5.png', title: 'ATLAS', day: '19', date: '', time: '11:00PM - 3:00AM', place: 'Beijing, China', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/6.png', title: 'ASTOR BAR', day: '23', date: '', time: '11:00PM - 3:00AM', place: 'Beijing, China', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/7.png', title: 'MANHATTAN', day: '26', date: '', time: '11:00PM - 3:00AM', place: 'Beijing, China', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/8.png', title: 'ATLAS', day: '27', date: '', time: '11:00PM - 3:00AM', place: 'Beijing, China', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
-            {src: './event/9.png', title: 'ASTOR BAR', day: '29', date: '', time: '11:00PM - 3:00AM', place: 'Beijing, China', details: 'Beer Belly is a funky beer bar in Thonglor, located at 72 Courtyard. The bar boasts an extensive beer collection with beers from all over the world. Their 20 taps serve everything from common brands...'},
+            {src: 'https://www.youtube.com/embed/mm3HmwDIixI', title: 'Anyone visited her stall?', day: '7', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/QL9i4T4rQ0A', title: 'Mint Club', day: '13', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/zSOlZG6Q8cI', title: "Sir Elley's Rooftop Bar", day: '16', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/lBllDJXbmIw', title: 'Muse Club Fun Night', day: '18', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/I3ltUEDiz1A', title: 'Muse Club', day: '19', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/Tu3a-HswxWE', title: 'China Dance Sexy Girl', day: '23', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+            {src: 'https://www.youtube.com/embed/cNE1WS2oLBA', title: 'Shenzhen Louhu Arena Club', day: '26', date: '', time: '11:00PM - 3:00AM', place: 'Kuala Lumpur, Malaysia', details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
           ]
         };
     }
@@ -51,22 +49,22 @@ class China extends Component {
                             <Grid item xs={4}>
                                     <div className="box">
                                         <div className="slide-img">
-                                        <img alt="1" src={details.src} />
+                                        <iframe width="100%" height="100%" src={details.src} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                                        <div className="overlay">
+                                        {/* <div className="overlay">
                                             <a href="#" className="buy-btn">Read More</a>	
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="detail-box">
                                         <div className="type">
-                                            <div className="event-tag">
+                                            {/* <div className="event-tag">
                                                 <img src="./tag.png" className="tag-size"></img>
                                                 <p className="tag-details">
                                                 <span className="event-date"><span className="event-date-details">{details.day}</span></span>
                                                 <span className="event-time"><i className="fal fa-clock fa-color"></i> <span className="time-details">{details.time}</span></span>
                                                 <span className="event-place"><i className="fal fa-map-marker-alt fa-color"></i> <span className="time-details">&nbsp;{details.place}</span></span>
                                                 </p>
-                                            </div>
+                                            </div> */}
                                                 <a href="#" >{details.title}</a>
                                                 <span className="event-details">{details.details}</span>
                                             </div>
