@@ -6,6 +6,15 @@
 	margin-top: 3%;
 }
 
+.img-size-position{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 420px;
+    opacity: .5;
+}
+
 
 .country-page-container {
 	margin-right: auto;

@@ -45,7 +45,7 @@ class Login extends Component {
         const data = { username: this.state.username, password: this.state.password };
 
         axios
-        .post("http://localhost:8000/api/auth/login", data)
+        .post("http://96chatroom.000webhostapp.com/public/api/auth/login", data)
         .then(res => {
             cookie.set("token", res.data.access_token);
             this.props.setLogin(res.data.user);

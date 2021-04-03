@@ -60,7 +60,16 @@ class Navbar extends Component {
                 </div>
                 <ul className={this.state.classChange ? 'nav-menu active' :  'nav-menu'}>
                 <li className='nav-item'><NavLink exact activeClassName="navbar__link--active"  to='/' className='nav-links links links--elara'>HOME</NavLink ></li>
-                <li className='nav-item'><NavLink activeClassName="navbar__link--active"  to='/event' className='nav-links links links--elara'>EVENT</NavLink ></li>
+                <li className='nav-item dropdown'>
+                    <NavLink activeClassName="navbar__link--active"  to='/event' className='nav-links links links--elara'>EVENT</NavLink >
+                    <div class="dropdown-content">
+                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="singapore.png" alt="sg"/> SINGAPORE</NavLink ></li>
+                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="malaysia.png" alt="sg"/> MALAYSIA</NavLink ></li>
+                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="china.png" alt="sg"/> CHINA</NavLink ></li>
+                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="vietnam.png" alt="sg"/> VIETNAM</NavLink ></li>
+                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="thailand.png" alt="sg"/> THAILAND</NavLink ></li>
+                    </div>
+                </li>
                 <li className='nav-item'><NavLink  activeClassName="navbar__link--active" to='/QandA' className='nav-links links links--elara'>Q & A</NavLink ></li>
                 <li className='nav-item'><NavLink activeClassName="navbar__link--active" to='/blog' className='nav-links links links--elara'>BLOG</NavLink ></li>
                 <li className='nav-item'><NavLink activeClassName="navbar__link--active" to='/contact' className='nav-links links links--elara'>CONTACT</NavLink ></li>

@@ -17,6 +17,33 @@
     backdrop-filter: blur(20px);
     /* Note: backdrop-filter has minimal browser support */
   }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(47, 47, 47, 0.5);
+    width: 215px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
   
   .navbar-container {
     display: flex;
@@ -33,10 +60,10 @@
 
   .logo-size {
     position: absolute;
-    width: 340px;
-    height: 60px;
+    width: 200px;
+    height: 65px;
     left: 0px;
-    top: 8px;
+    top: 6px;
     filter: drop-shadow(0px 4.93023px 4.93023px #000000);
   }
   
@@ -59,7 +86,7 @@
   }
   
   .nav-items {
-    display: none;
+    height: 60px;
   }
 
   .navbar__link--active {

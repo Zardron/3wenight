@@ -13,7 +13,7 @@
 
 .banner-size {
     position: absolute;
-    height: 870px;
+    height: 580px;
     left: 0px;
     top: 0px;
     width: 100%;
@@ -22,7 +22,7 @@
 }
 
 .girl-position {
-    height: 870px;
+    height: 580px;
 }
 
 .girl-size{
@@ -32,14 +32,14 @@
 
 
 .content {
-    margin-top: 870px;
+    margin-top: 580px;
     position: absolute;
     left: 0px;
     top: 0px;
     width: 100%;
     height: auto;
-
-    background: linear-gradient(90deg, #11232D 16.18%, #0B4553 87.23%);
+    background-image: url("../../scenes/bgcontent.jpg");
+    /* background: linear-gradient(90deg, #11232D 16.18%, #0B4553 87.23%); */
 }
 
 .marquee-details{
