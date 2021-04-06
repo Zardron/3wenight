@@ -20,6 +20,7 @@ class Event extends Model
 	 * @var array
 	 */
 	protected $fillable = [
+		'event_id',
 		'event_src',
 		'event_title',
         'event_day',

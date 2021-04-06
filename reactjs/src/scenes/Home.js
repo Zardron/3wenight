@@ -6,10 +6,10 @@ import MusicPlayer from './MusicPlayer';
 import BannerCarousel from '../../src/scenes/components/BannerCarousel'
 import EventCarousel from '../../src/scenes/components/EventCarousel'
 import Footer from '../../src/scenes/components/Footer'
+import { NavLink  } from 'react-router-dom'
 
 
 class Home extends Component {
-    
     render() { 
         return (  
             <>
@@ -28,6 +28,18 @@ class Home extends Component {
 
                 <div className="event-container">
                     <p className="event-title">EVENT OF THE MONTH</p>
+
+                    <div className="country-title">
+                        <NavLink activeClassName="navbar_link--active" to={{ pathname: "/country/singapore", state: { country: 'Singapore' } }} className="linkss linkss--elara">SINGAPORE <img src="/singapore.png" style={{height: "30px", paddingBottom: "4px"}} /></NavLink> 
+                        <span className="menu-spacing">|</span> 
+                        <NavLink activeClassName="navbar_link--active" to={{ pathname: "/country/malaysia", state: { country: 'Malaysia' } }} className="linkss linkss--elara">MALAYSIA <img src="/malaysia.png" style={{height: "30px", paddingBottom: "4px"}} /></NavLink> 
+                        <span className="menu-spacing">|</span> 
+                        <NavLink activeClassName="navbar_link--active" to={{ pathname: "/country/china", state: { country: 'China' } }} className="linkss linkss--elara">CHINA <img src="/china.png" style={{height: "30px", paddingBottom: "4px"}} /></NavLink> 
+                        <span className="menu-spacing">|</span> 
+                        <NavLink activeClassName="navbar_link--active" to={{ pathname: "/country/vietnam", state: { country: 'Vietnam' } }} className="linkss linkss--elara">VIETNAM <img src="/vietnam.png" style={{height: "30px", paddingBottom: "4px"}} /></NavLink> 
+                        <span className="menu-spacing">|</span> 
+                        <NavLink activeClassName="navbar_link--active" to={{ pathname: "/country/thailand", state: { country: 'Thailand' } }} className="linkss linkss--elara">THAILAND <img src="/thailand.png" style={{height: "30px", paddingBottom: "4px"}} /></NavLink>
+                        </div> 
                 </div>
                 <EventCarousel />
 

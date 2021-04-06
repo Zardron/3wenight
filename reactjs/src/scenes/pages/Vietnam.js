@@ -33,6 +33,7 @@ class Vietnam extends Component {
                 <div className="page-content">
                 <Navbar />
                 <img src="./country/vietnam.png" className="img-size"></img>
+                {/* <img src="./country/vietnam.gif" className="img-size-position"></img> */}
                 <marquee className="marquee-details"><br></br>Join us on our afterdark/nightlife telegram groKuala Lumpur, Malaysia <span className="marquee-color">(t.me/sgafterdark)</span>, china/hk <span className="marquee-color">(t.me/cnhkafterdark)</span>, thailand <span className="marquee-color">(t.me/thaiafterdark)</span>, malaysia <span className="marquee-color">(t.me/myafterdark)</span>, vietnam <span className="marquee-color">(t.me/vietafterdark)</span></marquee>
                 
                 <div className="desktopViews">

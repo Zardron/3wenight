@@ -113,7 +113,7 @@ class Contact extends Component {
 
                     <div className="register-label-position">
                         <div className="spacing"></div>
-                        <span className="register-label">Contact For Advertising Enquiries </span>
+                        <span className="register-label">Contact For Advertising Inquiries </span>
                         {error.errors ? <p className="MuiInputBase-input-error">{error.errors}</p> : ""}
                         <div className="spacing"></div>
                         <FormControl style={{width: '80%'}} variant="filled" error={(submitted && !firstname)}>

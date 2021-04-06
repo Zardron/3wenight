@@ -39,17 +39,17 @@ class Navbar extends Component {
             <>
             <nav className='navbar'>
                 <NavLink  to="/" className="navbar-logo">
-                        <img src="3wenight2.png" className="logo-size" alt="3webg"></img>
+                        <img src="/3wenight2.png" className="logo-size" alt="3webg"></img>
                 </NavLink >
 
                 <div className="countryMobile">
                 <i onClick={this.changeClass} className={this.state.FAChangeClass ? "fal fa-chevron-up faPosition": "fal fa-chevron-down faPosition"}></i>
                 <ul className={this.state.FAChangeClass ? 'nav-menu active' :  'nav-menu'}>
-                <li className='nav-item'><NavLink exact activeClassName="navbar__link--active"  to='/singapore' className='nav-links links links--elara'><img src="1.png" alt="sg"></img></NavLink ></li>
-                <li className='nav-item'><NavLink activeClassName="navbar__link--active"  to='/malaysia' className='nav-links links links--elara'><img src="2.png" alt="my"></img></NavLink ></li>
-                <li className='nav-item'><NavLink  activeClassName="navbar__link--active" to='/china' className='nav-links links links--elara'><img src="3.png" alt="ch"></img></NavLink ></li>
-                <li className='nav-item'><NavLink activeClassName="navbar__link--active" to='/vietnam' className='nav-links links links--elara'><img src="4.png" alt="vt"></img></NavLink ></li>
-                <li className='nav-item'><NavLink activeClassName="navbar__link--active" to='/thailand' className='nav-links links links--elara'><img src="5.png" alt="th"></img></NavLink ></li>
+                <li className='nav-item'><NavLink exact activeClassName="navbar__link--active"  to='/singapore' className='nav-links links links--elara'><img src="/1.png" alt="sg"></img></NavLink ></li>
+                <li className='nav-item'><NavLink activeClassName="navbar__link--active"  to='/malaysia' className='nav-links links links--elara'><img src="/2.png" alt="my"></img></NavLink ></li>
+                <li className='nav-item'><NavLink activeClassName="navbar__link--active" to='/china' className='nav-links links links--elara'><img src="/3.png" alt="ch"></img></NavLink ></li>
+                <li className='nav-item'><NavLink activeClassName="navbar__link--active" to='/vietnam' className='nav-links links links--elara'><img src="/4.png" alt="vt"></img></NavLink ></li>
+                <li className='nav-item'><NavLink activeClassName="navbar__link--active" to='/thailand' className='nav-links links links--elara'><img src="/5.png" alt="th"></img></NavLink ></li>
                 </ul>
                 </div>
                 
@@ -61,13 +61,13 @@ class Navbar extends Component {
                 <ul className={this.state.classChange ? 'nav-menu active' :  'nav-menu'}>
                 <li className='nav-item'><NavLink exact activeClassName="navbar__link--active"  to='/' className='nav-links links links--elara'>HOME</NavLink ></li>
                 <li className='nav-item dropdown'>
-                    <NavLink activeClassName="navbar__link--active"  to='/event' className='nav-links links links--elara'>EVENT</NavLink >
+                    <a to='#' className='nav-links links links--elara'>EVENT</a >
                     <div class="dropdown-content">
-                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="singapore.png" alt="sg"/> SINGAPORE</NavLink ></li>
-                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="malaysia.png" alt="sg"/> MALAYSIA</NavLink ></li>
-                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="china.png" alt="sg"/> CHINA</NavLink ></li>
-                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="vietnam.png" alt="sg"/> VIETNAM</NavLink ></li>
-                        <li className='nav-items'><NavLink  to='/' className='nav-links links links--elara'><img src="thailand.png" alt="sg"/> THAILAND</NavLink ></li>
+                        <li className='nav-items'><NavLink  to='/singapore' className='nav-links links links--elara'><img src="/singapore.png" alt="sg"/> SINGAPORE</NavLink ></li>
+                        <li className='nav-items'><NavLink  to='/malaysia' className='nav-links links links--elara'><img src="/malaysia.png" alt="sg"/> MALAYSIA</NavLink ></li>
+                        <li className='nav-items'><NavLink  to='/china' className='nav-links links links--elara'><img src="/china.png" alt="sg"/> CHINA</NavLink ></li>
+                        <li className='nav-items'><NavLink  to='/vietnam' className='nav-links links links--elara'><img src="/vietnam.png" alt="sg"/> VIETNAM</NavLink ></li>
+                        <li className='nav-items'><NavLink  to='/thailand' className='nav-links links links--elara'><img src="/thailand.png" alt="sg"/> THAILAND</NavLink ></li>
                     </div>
                 </li>
                 <li className='nav-item'><NavLink  activeClassName="navbar__link--active" to='/QandA' className='nav-links links links--elara'>Q & A</NavLink ></li>
@@ -77,8 +77,8 @@ class Navbar extends Component {
                     !this.props.loggedIn ? 
                     (
                     <Fragment>
-                        <li className='li-height'><NavLink  to='/login' className='btn-login'>LOGIN</NavLink ></li>
-                        <li className='li-height'><NavLink  to='/register' className='btn-register'>REGISTER</NavLink ></li>
+                        <li className='li-height'><NavLink  to='/login' className='btn-login'><img src="/login.png"></img></NavLink ></li>
+                        <li className='li-height'><NavLink  to='/register' className='btn-register'><img src="/register.png"></img></NavLink ></li>
                     </Fragment>
                     )
                     :
@@ -92,11 +92,11 @@ class Navbar extends Component {
                 {/* MOBILE VIEW */}
 
                 <div className="desktop">
-                    <NavLink to='/singapore'><img src="1.png" className="flag1"  alt="sg"></img></NavLink >
-                    <NavLink to='/malaysia'><img src="2.png" className="flag2"  alt="my"></img></NavLink >
-                    <NavLink to='/china'><img src="3.png" className="flag3"  alt="ch"></img></NavLink >
-                    <NavLink to='/vietnam'><img src="4.png" className="flag4"  alt="vt"></img></NavLink >
-                    <NavLink to='/thailand'><img src="5.png" className="flag5"  alt="th"></img></NavLink >
+                    <NavLink to='/singapore'><img src="/1.png" className="flag1"  alt="sg"></img></NavLink >
+                    <NavLink to='/malaysia'><img src="/2.png" className="flag2"  alt="my"></img></NavLink >
+                    <NavLink to='/china'><img src="/3.png" className="flag3"  alt="ch"></img></NavLink >
+                    <NavLink to='/vietnam'><img src="/4.png" className="flag4"  alt="vt"></img></NavLink >
+                    <NavLink to='/thailand'><img src="/5.png" className="flag5"  alt="th"></img></NavLink >
                 </div>
                 
             </nav>

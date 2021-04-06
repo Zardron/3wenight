@@ -31,6 +31,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     text-align: left;
+    top: 85px;
   }
   
   .dropdown-content a {
@@ -61,9 +62,9 @@
   .logo-size {
     position: absolute;
     width: 200px;
-    height: 65px;
+    height: 90px;
     left: 0px;
-    top: 6px;
+    top: 8px;
     filter: drop-shadow(0px 4.93023px 4.93023px #000000);
   }
   
@@ -82,7 +83,7 @@
   }
   
   .nav-item {
-    height: 80px;
+    height: 85px;
   }
   
   .nav-items {
@@ -102,7 +103,7 @@
     text-decoration: none !important;
     display: grid;
     grid-template-columns: repeat(11, auto);
-    padding-top: 34px;
+    padding-top: 21px;
     transition: 0.3s;
     font-size: 15px;
     font-weight: 500;
@@ -114,7 +115,6 @@
   
   
   .btn-login {
-    background: linear-gradient(90deg, #E520FD 0%, #E520FD 0.01%, #F5576C 100%);
     display: flex;
     align-items: center;
     text-decoration: none !important;
@@ -126,7 +126,6 @@
     font-size: 15px;
     font-weight: 500;
     font-family: 'Work Sans', sans-serif;
-    box-shadow: 1px 3px 10px #F0459C;
     border-radius: 20px;
     margin-top: 30px;
     top: -3px;
@@ -135,7 +134,6 @@
   }
 
   .btn-logins {
-    color: #74FFD5;
     display: flex;
     align-items: center;
     text-decoration: none !important;
@@ -172,7 +170,6 @@
     font-size: 15px;
     font-weight: 500;
     font-family: 'Work Sans', sans-serif;
-    box-shadow: 1px 3px 10px #00C9FF;
     border-radius: 20px;
     margin-top: 30px;
     top: -3px;
@@ -371,8 +368,8 @@
     .menu-icon {
       display: block;
       position: absolute;
-      top: -1px;
-      right: -8px;
+      top: -32px;
+      right: -20px;
       transform: translate(-100%, 60%);
       font-size: 2.8rem;
       cursor: pointer;
@@ -391,7 +388,9 @@
   
     .fa-times {
       color: #fff;
-      font-size: 2rem;
+      font-size: 3rem;
+      margin-right: 5px;
+      left: 0;
     }
   
     .nav-links-mobile:hover {
@@ -465,7 +464,7 @@
   } 
   
 
-  @media screen and (max-width: 540px){
+  @media screen and (max-width: 1300px){
 
     .countryMobile{
        display: unset;
@@ -478,7 +477,9 @@
 
     .logo-size{
         width: 140px;
-        height: 60px;
+        height: 70px;
+        left: 0px;
+        top: 15px;
     }
     .flag1 {
       margin-top: auto;
@@ -532,7 +533,9 @@
 
     .logo-size{
       width: 130px;
-      height: 60px;
+      height: 70px;
+      left: 0px;
+      top: 15px;
     }
     .flag1 {
       margin-top: auto;
@@ -578,6 +581,8 @@
     .logo-size{
         width: 125px;
         height: 60px;
+        left: 0px;
+        top: 8px;
     }
     .flag1 {
       margin-top: auto;
@@ -626,41 +631,58 @@
   }
 
 
-.links::before,
-.links::after {
+.linkss {
+  cursor: pointer;
+  font-size: 26px;
+  position: relative;
+  white-space: nowrap;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+.menu-spacing {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.linkss::before,
+.linkss::after {
     position: absolute;
     width: 100%;
     height: 1px;
-    background: currentColor;
+    background: #fff;
     top: 100%;
     left: 0;
     pointer-events: none;
 }
 
-.links::before {
+.linkss::before {
     content: '';
 }
-.links--elara {
+.linkss--elara {
     font-family: aktiv-grotesk-extended, sans-serif;
-    font-size: 16px;
+    font-size: 24px;
 }
 
-.links--elara::before {
+.linkss--elara::before {
     transition: clip-path 0.7s, transform 0.7s cubic-bezier(0.2, 1, 0.8, 1);
     clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
 }
 
-.links--elara:hover::before {
+.linkss--elara:hover::before {
     transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
     clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
 }
 
-.links--elara span {
+.linkss--elara span {
     display: inline-block;
     transition: transform 0.7s cubic-bezier(0.2, 1, 0.8, 1);
 }
 
-.links--elara:hover span {
+.linkss--elara:hover span {
     transform: translate3d(0, -2px, 0);
 }
 

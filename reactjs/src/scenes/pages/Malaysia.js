@@ -34,7 +34,7 @@ class Malaysia extends Component {
                 <div className="page-content">
                 <Navbar />
                 <img src="./country/malaysia.png" className="img-size"></img>
-                <img src="./country/malaysia.gif" className="img-size-position"></img>
+                {/* <img src="./country/malaysia.gif" className="img-size-position"></img> */}
                 <marquee className="marquee-details"><br></br>Join us on our afterdark/nightlife telegram groKuala Lumpur, Malaysia <span className="marquee-color">(t.me/sgafterdark)</span>, china/hk <span className="marquee-color">(t.me/cnhkafterdark)</span>, thailand <span className="marquee-color">(t.me/thaiafterdark)</span>, malaysia <span className="marquee-color">(t.me/myafterdark)</span>, vietnam <span className="marquee-color">(t.me/vietafterdark)</span></marquee>
                 
                 <div className="desktopViews">

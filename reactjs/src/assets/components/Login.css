@@ -5,7 +5,7 @@
     width: 100%;
     height: auto;
 
-    background: linear-gradient(90deg, #11232D 16.18%, #0B4553 87.23%);
+    background-image: url("../../scenes/bgcontent.jpg");
 }
 
 .page-banner-size{

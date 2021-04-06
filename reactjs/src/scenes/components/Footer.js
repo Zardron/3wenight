@@ -23,9 +23,9 @@ class Footer extends Component {
                         </div>  
 
                         <div className="col-lg-6 col-md-8 col-sm-12 col-lg-offset-0 col-md-offset-2 col-sm-offset-0">
-                            <span className="span2"><a target="_blank" href="https://www.facebook.com/groups/sgafterdark/"><img src="fb.png" className="social-size"></img></a></span>
-                            <span className="span2"><a target="_blank" href="https://t.me/sgafterdark"><img src="telegram.png" className="social-size"></img></a></span>
-                            <span className="span2"><a target="_blank" href="https://www.youtube.com/channel/UCZAx4wAe3j7LX6_ys_iFTeA"><img src="youtube.png" className="social-size"></img></a></span>
+                            <span className="span2"><a target="_blank" href="https://www.facebook.com/3WE-Afterdark-105772774651041/"><img src="/fb.png" className="social-size"></img></a></span>
+                            <span className="span2"><a target="_blank" href="https://t.me/sgafterdark"><img src="/telegram.png" className="social-size"></img></a></span>
+                            <span className="span2"><a target="_blank" href="https://www.youtube.com/channel/UCZAx4wAe3j7LX6_ys_iFTeA"><img src="/youtube.png" className="social-size"></img></a></span>
                         </div>
 
                         <div className="col-lg-3 col-md-6 col-sm-12">

@@ -12,6 +12,7 @@ a{
 
 	
 }
+
 .slide-img{
 	height: 300px;
 	position:relative;
@@ -36,6 +37,85 @@ a{
 	display: flex;
 	flex-direction: column;
 }
+
+.read-more {
+	animation:blinkingText 1.3s infinite;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle !important;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid white;
+	width: 100%;
+	margin-top: 10px;
+	color: white !important;
+	height: unset !important;
+}
+
+.comment {
+	animation:blinkingText 1.3s infinite;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle !important;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid white;
+	width: 100%;
+	margin-top: 10px;
+	color: white !important;
+	height: unset !important;
+}
+
+.aw{
+	visibility: hidden !important;
+	position: absolute;
+	top: 36%;
+    left: -50px;
+    width: 150px;
+    height: 100px;
+    transition: .3s;
+}
+
+.read-more:hover .aw{
+	visibility: unset !important;
+	transition: .5s;
+    left: 0;
+	color: #00FFC2;
+}
+
+.read-more:hover{
+	color: #00FFC2 !important;
+}
+
+@keyframes blinkingText{
+	0%{		background-color: #00ffcc00;	}
+	15%{	background-color: #00ffcc11;	}
+	25%{	background-color: #00FFCC22;	}
+	50%{	background-color: #00FFCC32;	}
+	75%{	background-color: #00FFCC43;	}
+	100%{	background-color: #00FFCC55;	}
+}
+
 .type a{
 	color:#00FFC2;
 	margin: 5px 0px;
@@ -46,12 +126,23 @@ a{
 	height: 40px;
 }
 .type span{
+	padding-top: 15px;
+	color: white;
+	font-size: 14px;
+	text-align: justify;
+	display: -webkit-box;   
+   	-webkit-line-clamp: 3;   
+   	-webkit-box-orient: vertical;     
+   	overflow: hidden;
+}
+
+.type label{
 	padding-top: 5px;
 	color: white;
 	font-size: 14px;
 	text-align: justify;
-	height: 60px;	
 }
+
 .price{
 	color: #333333;
 	font-weight: 600;
@@ -216,6 +307,9 @@ a{
     text-align: center;
 }
 
+.mobile-view-event {
+	display: none;
+}
 
 @media screen and (max-width: 1024px){
 	.spacing {
@@ -253,11 +347,29 @@ a{
 	}
 
 	.type span {
-		height: 140px !important;
+		display: -webkit-box;   
+		-webkit-line-clamp: 5;   
+		-webkit-box-orient: vertical;     
+		overflow: hidden;
+	}
+
+	.type a {
+		display: -webkit-box;   
+		-webkit-line-clamp: 5;   
+		-webkit-box-orient: vertical;     
+		overflow: hidden;
 	}
 
 	.slick-dots {
 		display: none !important;
+	}
+
+	.desktop-view-event{
+		display: none;
+	}
+
+	.mobile-view-event{
+		display: unset;
 	}
 
 }

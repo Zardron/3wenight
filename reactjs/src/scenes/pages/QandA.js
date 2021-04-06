@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from '../Navbar'
 import Carousel from '../../scenes/components/Carousel'
-import PageBanner from '../../scenes/components/PageBanner';
+import BannerCarousel from '../../scenes/components/BannerCarousel';
 import Footer from '../components/Footer'
 import Slider from "react-slick";
 
@@ -19,6 +19,11 @@ class QandA extends Component {
             {src: './banner/5.gif'},
             {src: './banner/6.gif'},
             {src: './banner/7.gif'},
+            {src: './banner/vacant_slot.gif'},
+            {src: './banner/vacant_slot.gif'},
+            {src: './banner/vacant_slot.gif'},
+            {src: './banner/vacant_slot.gif'},
+            {src: './banner/vacant_slot.gif'},
           ]
         };
       }
@@ -64,7 +69,7 @@ class QandA extends Component {
                     <marquee className="marquee-details"><br></br>Join us on our afterdark/nightlife telegram group for singapore <span className="marquee-color">(t.me/sgafterdark)</span>, china/hk <span className="marquee-color">(t.me/cnhkafterdark)</span>, thailand <span className="marquee-color">(t.me/thaiafterdark)</span>, malaysia <span className="marquee-color">(t.me/myafterdark)</span>, vietnam <span className="marquee-color">(t.me/vietafterdark)</span></marquee>
 
                     <div className="eventDesktopView">
-                        <PageBanner />
+                        <BannerCarousel />
                     </div>
 
                     <div className="mobileView">

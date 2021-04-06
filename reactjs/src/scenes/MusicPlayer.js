@@ -7,38 +7,38 @@ function MusicPlayer(){
         {
             title: "Bangarang",
             artist: "SKRILLEX feat. Sirah",
-            img_src: "./images/1.jpg",
-            src: "./music/1.mp3"
+            img_src: "/images/1.jpg",
+            src: "/music/1.mp3"
         },
         {
             title: "LMFAO",
             artist: "Party Rock Anthem",
             img_src: "./images/2.jpg",
-            src: "./music/2.mp3"
+            src: "/music/2.mp3"
         },
         {
             title: "Dirty Bit",
             artist: "Black Eyed Peas",
-            img_src: "./images/3.jpg",
-            src: "./music/3.mp3"
+            img_src: "/images/3.jpg",
+            src: "/music/3.mp3"
         },
         {
             title: "On & On",
             artist: "Artist 3",
-            img_src: "./images/4.jpg",
-            src: "./music/4.mp3"
+            img_src: "/images/4.jpg",
+            src: "/music/4.mp3"
         },
         {
             title: "Make It Bun Dem",
             artist: "Skrillex, Damian & Jr. Gong ",
-            img_src: "./images/5.jpg",
-            src: "./music/5.mp3"
+            img_src: "/images/5.jpg",
+            src: "/music/5.mp3"
         },
         {
             title: "Alone",
             artist: "Marshmello",
-            img_src: "./images/6.jpg",
-            src: "./music/6.mp3"
+            img_src: "/images/6.jpg",
+            src: "/music/6.mp3"
         }
     ]);
 
