@@ -29,7 +29,7 @@ class EventCarousel extends Component {
               this.setState({ error });
             }
           )
-      }
+    }
 
     render() {
         const settings = {

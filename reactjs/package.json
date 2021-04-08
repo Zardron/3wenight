@@ -25,6 +25,7 @@
     "react-responsive-carousel": "^3.2.15",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-share": "^4.4.0",
     "react-slick": "^0.28.1",
     "react-smooth-marquee": "^1.0.0",
     "react-typical": "^0.1.3",

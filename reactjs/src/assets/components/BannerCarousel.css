@@ -50,6 +50,10 @@
     width: calc(100% / 5);
 }
 
+.carousel-content.show-7 > * {
+    width: calc(100% / 7);
+}
+
 .right-arrow {
     position: absolute;
     z-index: 1;

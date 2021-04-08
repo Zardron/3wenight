@@ -19,16 +19,31 @@ class Country extends Component {
         this.state = {
           error: null,
           detailss: [],
-          newCountry: "",
+          country: "",
         };
       }
 
+    componentDidMount() {
+        const apiUrl = 'http://localhost:8000/api/auth/get-country-event/'+this.props.location.state.country;
+            fetch(apiUrl)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                this.setState({
+                    detailss: result
+                });
+                },
+                (error) => {
+                this.setState({ error });
+                }
+            )
+    }
 
-      componentWillReceiveProps() {
-        console.log('this.props', this.props)
-		if (this.props.location.state !== this.props.location.state.country) {
-			const country = this.props.location.state.country;
-            console.log(this.props.location.state.country);
+      componentWillReceiveProps(nextProps) {
+        console.log('this.props', nextProps)
+		if (this.props.location.state !== nextProps.location.state.country) {
+			const country = nextProps.location.state.country;
+            console.log(nextProps.location.state.country);
             const apiUrl = 'http://localhost:8000/api/auth/get-country-event/'+country;
             console.log(apiUrl);
             fetch(apiUrl)
@@ -37,8 +52,6 @@ class Country extends Component {
                 (result) => {
                 this.setState({
                     detailss: result
-
-                    
                 });
                 },
                 (error) => {
@@ -76,8 +89,8 @@ class Country extends Component {
         ]
         
     };
-        
         return (  
+            
             <>
             <Navbar />
             <Carousel />
@@ -116,7 +129,7 @@ class Country extends Component {
                 <div className="spacing">
                         <div className="box">
                             <div className="slide-img">
-                                <img alt="1" src={"/"+details.event_src} />
+                                <img alt="1" src={details.event_src} />
                                 <div className="overlay">
                                     <Link exact to={{ pathname: "/event/"+ slug, state: { slug } }} className="buy-btn">Read More </Link>
                                 </div>
@@ -134,7 +147,7 @@ class Country extends Component {
                                     <div className="event-titles">
                                         <Link exact to={{ pathname: "/event/"+ slug, state: { slug } }}>{details.event_title}</Link>
                                         <br></br>
-                                        <label style={{marginBottom: "0px !important", fontSize: "14px", paddingRight: "20px"}}><i className="fas fa-calendar-alt" style={{color: "#0fc"}}></i> {details.event_day}</label>
+                                        {/* <label style={{marginBottom: "0px !important", fontSize: "14px", paddingRight: "20px"}}><i className="fas fa-calendar-alt" style={{color: "#0fc"}}></i> {details.event_day}</label> */}
                                         <label style={{marginBottom: "0px !important", fontSize: "14px", paddingRight: "20px"}}><i className="far fa-clock" style={{color: "#0fc", fontSize: "14px"}}></i>{details.event_time}</label>
                                         <label style={{marginBottom: "0px !important", fontSize: "14px", paddingRight: "20px"}}><i className="fal fa-map-marker-alt" style={{color: "#0fc", fontSize: "14px"}}></i> {details.country} <i class={'flag flag-'+details.country_code}></i></label>
                                     </div>

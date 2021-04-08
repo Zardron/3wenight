@@ -45,7 +45,7 @@
 .marquee-details{
     margin-right: auto;
     margin-left: auto;
-    color: white;
+    color: #c2c2c2;
     height: auto !important;
     font-size: 18px;
     font-family: 'Work Sans', sans-serif;
@@ -99,6 +99,7 @@
     /* identical to box height */
     color: #FFFFFF;
     text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.88);
+    padding-top: 40px;
 }
 
 .country-title {

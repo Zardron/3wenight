@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Navbar from '../Navbar'
 import Footer from '../components/Footer'
 import '../../assets/components/Register.css'
-import PageBanner from '../../scenes/components/PageBanner';
+import BannerCarousel from '../../scenes/components/BannerCarousel';
 import {InputLabel, FormControl, FilledInput, Button, IconButton, InputAdornment } from '@material-ui/core';
 import Slider from "react-slick";
 import axios from 'axios';
@@ -187,7 +187,7 @@ class Contact extends Component {
                 <marquee className="marquee-details"><br></br>Join us on our afterdark/nightlife telegram group for singapore <span className="marquee-color">(t.me/sgafterdark)</span>, china/hk <span className="marquee-color">(t.me/cnhkafterdark)</span>, thailand <span className="marquee-color">(t.me/thaiafterdark)</span>, malaysia <span className="marquee-color">(t.me/myafterdark)</span>, vietnam <span className="marquee-color">(t.me/vietafterdark)</span></marquee>
                 
                 <div className="eventDesktopView">
-                    <PageBanner />
+                        <BannerCarousel />
                 </div>
 
                 <div className="mobileView">

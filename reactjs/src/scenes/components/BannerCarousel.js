@@ -10,7 +10,7 @@ function BannerCarousel() {
         <>
         <div style={{  marginLeft: 'auto', marginRight: 'auto' }}>
             <Carousels
-                show={5}
+                show={7}
             >
                 <div>
                     <div className="banner-div">

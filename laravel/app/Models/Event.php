@@ -25,8 +25,11 @@ class Event extends Model
 		'event_title',
         'event_day',
         'event_time',
-		'event_place',
+		'event_type',
+		'country',
+		'country_code',
         'event_details',
+        'slug',
 	];
 
 	 protected $dates = ['deleted_at'];

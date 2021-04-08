@@ -3,7 +3,7 @@
 }
 
 .eventDesktopView{
-	margin-top: 3%;
+	margin-top: 15px;
 	width: 100%;
 	padding-left: 150px;
 	padding-right: 150px;
@@ -59,6 +59,119 @@
 	height: unset !important;
 }
 
+.comment-label {
+	font-family: 'Roboto',sans-serif;
+    font-weight: 0 !important;
+    line-height: 1.1;
+    color: #0fc !important;
+	font-size: 40px !important;
+	text-align: center !important;
+	padding-top: unset !important;
+}
+
+.leave-comment {
+	position: absolute;
+    bottom: -25px;
+    left: 50%;
+    width: 20px;
+    color: #03ac89;
+    margin-left: -10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: 'Roboto',sans-serif;
+}
+
+.leave-comment-label {
+	font-family: 'Roboto',sans-serif;
+    font-weight: lighter;
+    line-height: 1.1;
+    color: #03ac89 !important;
+	font-size: 34px !important;
+	text-align: center !important;
+	padding-top: 40px !important;
+	padding-bottom: 30px;
+}
+
+.leave-comment::after {
+	content: "";
+	position: absolute;
+	top: 22px;
+	left: 50%;
+	margin-left: -50px;
+	border-bottom: 1px solid #03ac89;
+	width: 100px;
+	height: 1px;
+	text-align: center;
+}
+
+.logged-in {
+	font-size: 13px !important; 
+	padding-right: 0px !important; 
+	color: #03ac89 !important;
+	text-align: center !important;
+}
+
+.logged-in:hover {
+	color: #0fc !important;
+}
+
+.rock_heading_div {
+    width: 100%;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.comment-area {
+	display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 20px;
+    line-height: 1.42857143;
+    color: #fff;
+    background-color: #0d0d0d;
+    background-image: none;
+    border: 1px solid #fff;
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.comment-area:hover {
+    color: #0fc;
+    border: 1px solid #0fc;
+}
+
+/* .comment-area-spacing {
+	margin-top: 10%;
+} */
+
+.post-comment {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #fff;
+    outline: none;
+	margin-top: 10px;
+	float: right;
+}
+
+.post-comment:hover {
+    border: 1px solid #0fc;
+    outline: none;
+	color: #0fc;
+}
+
+
+
+
 @media screen and (max-width: 768px){
 	.EventMobileView{
 		display: unset;
@@ -88,5 +201,231 @@
 	.event-img-size {
 		height: 220px;
 	}
+
+	.comment-area-spacing {
+		margin-top: 42%;
+	}
 }
 
+
+.topnav {
+	width: 100%;
+    box-sizing: border-box;
+	padding-left: 135px;
+    padding-right: 173px;
+	padding-top: 10px;
+  }
+  
+  .topnav a {
+	float: left;
+	display: block;
+	color: WHITE;
+	text-align: center;
+	padding: 5px 16px;
+	text-decoration: none;
+	font-size: 20px;
+  }
+  
+  .topnav a:hover {
+	color: #00FFCC;
+  }
+  
+  .topnav a.active {
+	color: #00FFCC;
+  }
+  
+  .topnav .search-container {
+	float: right;
+  }
+  
+  .topnav input[type=text] {
+	padding: 6px;
+	font-size: 17px;
+    border: 1px solid white;
+	color: white;
+	background: black;
+    border-radius: 5px;
+  }
+  
+  .topnav .search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-right: 16px;
+	background: rgba(57, 57, 57, 0.5);
+	font-size: 17px;
+	cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+	.topnav .search-container {
+	  float: none;
+	}
+	.topnav a, .topnav input[type=text], .topnav .search-container button {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	  width: 100%;
+	  margin: 0;
+	  padding: 14px;
+	}
+	.topnav input[type=text] {
+	  border: 1px solid #ccc;  
+	}
+  }
+
+
+  .MuiGrid-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 150px;
+    padding-right: 150px;
+	padding-top: 30px;
+
+}
+
+
+.content-item {
+    /* padding:30px 0; */
+	background-color:transparent !important;
+}
+
+.content-item.grey {
+	background-color:#F0F0F0;
+	padding:50px 0;
+	height:100%;
+}
+
+.content-item h2 {
+	font-weight:700;
+	font-size:35px;
+	line-height:45px;
+	text-transform:uppercase;
+	margin:20px 0;
+}
+
+.content-item h3 {
+	font-weight:400;
+	font-size:20px;
+	color:#555555;
+	margin:10px 0 15px;
+	padding:0;
+}
+
+.content-headline {
+	height:1px;
+	text-align:center;
+	margin:20px 0 70px;
+}
+
+.content-headline h2 {
+	background-color:#FFFFFF;
+	display:inline-block;
+	margin:-20px auto 0;
+	padding:0 20px;
+}
+
+.grey .content-headline h2 {
+	background-color:#F0F0F0;
+}
+
+.content-headline h3 {
+	font-size:14px;
+	color:#AAAAAA;
+	display:block;
+}
+
+
+#comments {
+    box-shadow: 0 -1px 6px 1px rgba(0,0,0,0.1);
+	background-color:#FFFFFF;
+}
+
+#comments form {
+	margin-bottom:30px;
+}
+
+#comments .btn {
+	margin-top:7px;
+}
+
+#comments form fieldset {
+	clear:both;
+}
+
+#comments form textarea {
+	height:100px;
+}
+
+#comments .media {
+	border-top:1px dashed #DDDDDD;
+	padding:20px 0;
+	margin:0;
+}
+
+#comments .media > .pull-left {
+    margin-right:20px;
+}
+
+#comments .media img {
+	max-width:100px;
+}
+
+#comments .media h4 {
+	margin:0 0 10px;
+}
+
+#comments .media h4 span {
+	font-size:14px;
+	float:right;
+	color:#999999;
+}
+
+#comments .media p {
+	margin-bottom:15px;
+	text-align:justify;
+}
+
+#comments .media-detail {
+	margin:0;
+}
+
+#comments .media-detail li {
+	color:#AAAAAA;
+	font-size:12px;
+	padding-right: 10px;
+	font-weight:600;
+}
+
+#comments .media-detail a:hover {
+	text-decoration:underline;
+}
+
+#comments .media-detail li:last-child {
+	padding-right:0;
+}
+
+#comments .media-detail li i {
+	color:#666666;
+	font-size:15px;
+	margin-right:10px;
+}
+
+.like-reply {
+    font-size: 12px !important;
+    padding-right: 10px !important;
+    font-weight: 600 !important;
+	color: #489484 !important;
+    text-decoration: none !important;
+}
+
+.date-like {
+	color: #489484 !important;
+    font-size: 12px !important;
+    padding-right: 10px !important;
+    font-weight: 600 !important;
+}
