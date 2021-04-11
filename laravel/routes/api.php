@@ -10,7 +10,8 @@ Route::group([
     Route::post('login', 'AuthController@login');
     Route::post('register', 'AuthController@register');
     Route::get('event', 'EventController@event');
-    Route::get('get-event/{event_title}', 'EventController@getEvent');
+    Route::post('comment-event', 'EventController@commentEvent');
+    Route::get('get-event/{slug}', 'EventController@getEvent');
     Route::get('get-comment/{slug}', 'EventController@getEventComment');
     Route::get('get-comment-count/{slug}', 'EventController@getEventCommentCount');
     Route::get('get-country-event/{event_country}', 'EventController@getCountryEvent');

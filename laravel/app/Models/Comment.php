@@ -24,7 +24,8 @@ class Comment extends Model
 		'slug',
 		'name',
         'message',
-        'message_at',
+        'created_at',
+        'updated_at',
 	];
 
 	 protected $dates = ['deleted_at'];

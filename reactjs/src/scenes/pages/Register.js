@@ -40,7 +40,7 @@ class Register extends Component {
         };
 
         axios
-        .post("http://96chatroom.000webhostapp.com/public/api/auth/register", data)
+        .post("http://localhost:8000/api/auth/register", data)
         .then(res => {
             cookie.set("token", res.data.access_token);
             this.props.setLogin(res.data.user);

@@ -162,14 +162,14 @@ class Vietnam extends Component {
                                       </div>
 
                                       <div className="col-6">
-                                        <Link className="read-more" exact to={{ pathname: "/event/"+ details.slug, state: { slug: details.slug } }}><i class="fas fa-long-arrow-right aw"></i> 0 Comment</Link>
+                                        <Link className="read-more" exact to={{ pathname: "/event/"+ details.slug, state: { slug: details.slug } }}><i class="fas fa-long-arrow-right aw"></i> Comment</Link>
                                       </div>
                                     </div>
 
                                     <div className="mobile-view-event">
                                         <Link className="read-more" to={{ pathname: "/event/"+ details.slug, state: { slug: details.slug } }}><i class="fas fa-long-arrow-right aw"></i> Press for More</Link>
 
-                                        <Link className="read-more" to={{ pathname: "/event/"+ details.slug, state: { slug: details.slug } }}><i class="fas fa-long-arrow-right aw"></i> 0 Comment</Link>
+                                        <Link className="read-more" to={{ pathname: "/event/"+ details.slug, state: { slug: details.slug } }}><i class="fas fa-long-arrow-right aw"></i> Comment</Link>
                                     </div>
                                 </div>
                             </div>

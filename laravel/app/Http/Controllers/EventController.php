@@ -10,21 +10,31 @@ class EventController extends Controller
 {
     public function event(Event $event){
         $event = Event::toBase()->get();
-        return $event;
+        return response()->json($event);
     }
 
     public function getEvent(Request $request){
-        $title = $request->route('event_title');
-        $event = Event::where("slug", $title)->first();
+        $slug = $request->route('slug');
+        $event = Event::where("slug", $slug)->first();
 
-        return $event;
+        return response()->json($event);
+    }
+
+    public function commentEvent(Request $request){
+
+        $comment = new Comment;
+        $comment->slug = $request->slug;
+        $comment->message = $request->comment;
+        $comment->name = $request->name;
+        $comment->save();
+        return response()->json($comment);
     }
 
     public function getEventComment(Request $request){
         $slug = $request->route('slug');
-        $event = Comment::where("slug", $slug)->get();
+        $event = Comment::where("slug", $slug)->orderByDesc('created_at')->get();
 
-        return $event;
+        return response()->json($event);
     }
 
     public function getEventCommentCount(Request $request){
@@ -38,8 +48,9 @@ class EventController extends Controller
         $country = $request->route('event_country');
         $event = Event::where("country", $country)->get();
 
-        return $event;
+        return response()->json($event);
     }
+    
 
     public function filterCountryEvent(Request $request){
         $event_type = $request->route('filter_event');
@@ -49,6 +60,6 @@ class EventController extends Controller
             ['country', $country]
         ])->get();
 
-        return $event;
+        return response()->json($event);
     }
 }

@@ -3,6 +3,7 @@ import '../../assets/components/EventCarousel.css'
 import Slider from "react-slick";
 import { Link } from "react-router-dom"
 
+
 class EventCarousel extends Component {
 
     constructor(props) {
@@ -16,8 +17,7 @@ class EventCarousel extends Component {
       }
 
     componentWillMount() {
-        const apiUrl = 'http://localhost:8000/api/auth/event';
-        fetch(apiUrl)
+        fetch("http://localhost:8000/api/auth/event")
           .then(res => res.json())
           .then(
             (result) => {
@@ -80,6 +80,7 @@ class EventCarousel extends Component {
                             </div>
                                 <div className="detail-box">
                                     <div className="type">
+                                      
                                     {/* <div className="event-tag">
                                         <img src="./tag.png" className="tag-size"></img>
                                         <p className="tag-details">
@@ -91,7 +92,7 @@ class EventCarousel extends Component {
                                     <div className="event-titles">
                                         <Link exact to={{ pathname: "/event/"+ slug, state: { slug } }}>{details.event_title}</Link>
                                         <br></br>
-                                        <label style={{marginBottom: "0px !important", fontSize: "14px", paddingRight: "20px"}}><i className="fas fa-calendar-alt" style={{color: "#0fc"}}></i> {details.event_day}</label>
+                                        {/* <label style={{marginBottom: "0px !important", fontSize: "14px", paddingRight: "20px"}}><i className="fas fa-calendar-alt" style={{color: "#0fc"}}></i> {details.event_day}</label> */}
                                         <label style={{marginBottom: "0px !important", fontSize: "14px", paddingRight: "20px"}}><i className="far fa-clock" style={{color: "#0fc", fontSize: "14px"}}></i>{details.event_time}</label>
                                         <label style={{marginBottom: "0px !important", fontSize: "14px", paddingRight: "20px"}}><i className="fal fa-map-marker-alt" style={{color: "#0fc", fontSize: "14px"}}></i> {details.country} <i class={'flag flag-'+details.country_code}></i></label>
                                     </div>
@@ -103,14 +104,14 @@ class EventCarousel extends Component {
                                       </div>
 
                                       <div className="col-6">
-                                        <Link className="read-more" exact to={{ pathname: "/event/"+ slug, state: { slug } }}><i class="fas fa-long-arrow-right aw"></i> 0 Comment</Link>
+                                        <Link className="read-more" exact to={{ pathname: "/event/"+ slug, state: { slug } }}><i class="fas fa-long-arrow-right aw"></i> Comment</Link>
                                       </div>
                                     </div>
 
                                     <div className="mobile-view-event">
                                         <Link className="read-more" exact to={{ pathname: "/event/"+ slug, state: { slug } }}><i class="fas fa-long-arrow-right aw"></i> Press for More</Link>
 
-                                        <Link className="read-more" exact to={{ pathname: "/event/"+ slug, state: { slug } }}><i class="fas fa-long-arrow-right aw"></i> 0 Comment</Link>
+                                        <Link className="read-more" exact to={{ pathname: "/event/"+ slug, state: { slug } }}><i class="fas fa-long-arrow-right aw"></i> Comment</Link>
                                     </div>
                                 </div>
                             </div>
