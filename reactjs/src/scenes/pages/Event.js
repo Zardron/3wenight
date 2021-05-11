@@ -21,6 +21,7 @@ import {loadAllComments, loadCommentCount} from '../store/Actions/CommentActions
 import Moment from 'react-moment';
 import 'moment-timezone';
 import store from '../store/index'
+import Disqus from "disqus-react"
 
 class Event extends Component {
     constructor(props) {
@@ -76,6 +77,7 @@ class Event extends Component {
     
     render() {
         let details = this.state.detailss;
+      
         return ( 
 
             <>

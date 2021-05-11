@@ -45,7 +45,7 @@ class Login extends Component {
         const data = { username: this.state.username, password: this.state.password };
 
         axios
-        .post("http://localhost:8000/api/auth/login", data)
+        .post("http://localhost:8000/api/auth/register", data)
         .then(res => {
             cookie.set("token", res.data.access_token);
             this.props.setLogin(res.data.user);
@@ -159,4 +159,4 @@ const mapDispatchToProps = dispatch => {
       setLogin: user => dispatch({ type: "SET_LOGIN", payload: user })
     };
   };
-  export default connect(null,mapDispatchToProps)(Login);
+export default connect(null,mapDispatchToProps)(Login);
